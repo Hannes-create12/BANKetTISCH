@@ -1,0 +1,250 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8fafc;
+    color: #222;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #3153a2 0%, #5588dd 100%);
+    color: #fff;
+    padding: 2em 0 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(50,80,160,0.10);
+    border-radius: 0 0 18px 18px;
+}
+
+header h1 {
+    margin: 0 0 0.2em 0;
+    font-size: 2.2em;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 0 2px 6px #28407744;
+}
+
+nav {
+    margin-top: 1em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.5em;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color .2s;
+}
+
+nav a:hover {
+    color: #ffd966;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 960px;
+    margin: 2.5em auto;
+    padding: 2em 2em 2em 2em;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px rgba(50,80,160,0.08);
+}
+
+.hinweis-vermietung {
+    background: #fffbe6;
+    color: #6a5400;
+    border: 1.5px solid #ffd966;
+    border-radius: 8px;
+    padding: 1em 1.5em;
+    margin-bottom: 2em;
+    font-size: 1.14em;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 2px 8px #ffd96633;
+}
+
+section.produkte {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-between;
+}
+
+.produkt {
+    flex: 1 1 270px;
+    background: #eff3fa;
+    border-radius: 14px;
+    padding: 1.5em 1em 1em 1em;
+    box-shadow: 0 2px 10px rgba(100,130,200,0.07);
+    text-align: center;
+    transition: transform .15s, box-shadow .15s;
+    min-width: 240px;
+    position: relative;
+}
+
+.produkt:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 25px rgba(100,130,200,0.13);
+}
+
+.produkt img {
+    max-width: 100%;
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px #bfcbe5aa;
+}
+
+.produkt h2 {
+    margin-top: 0;
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #2a4480;
+}
+
+.produkt ul {
+    padding: 0;
+    list-style: none;
+    margin: 0.5em 0 1em 0;
+    color: #3a4a68;
+}
+
+.produkt ul li {
+    margin-bottom: 0.3em;
+    font-size: 1em;
+}
+
+.topseller {
+    border: 2px solid #f9c846;
+    box-shadow: 0 4px 24px #ffe7ab33;
+}
+
+.topseller-label {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #f9c846 0%, #ffd966 100%);
+    color: #3a2a00;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0.25em 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ffd96655;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.button, .whatsapp-btn {
+    display: inline-block;
+    padding: 0.65em 1.4em;
+    background: linear-gradient(90deg, #2a4480 0%, #4478c2 100%);
+    color: #fff !important;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.13em;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1em;
+    box-shadow: 0 2px 8px #bfcbe5aa;
+    cursor: pointer;
+    transition: background .18s, transform .13s;
+}
+
+.button:hover, .whatsapp-btn:hover {
+    background: linear-gradient(90deg, #1b2a5c 0%, #2d5fa7 100%);
+    color: #ffd966 !important;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.whatsapp-btn {
+    background: linear-gradient(90deg, #25d366 0%, #128c7e 100%);
+    color: #fff !important;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    font-weight: 700;
+    font-size: 1.13em;
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(90deg, #128c7e 0%, #075e54 100%);
+    color: #fff !important;
+}
+
+form#kontakt-form {
+    max-width: 440px;
+    margin: 0 auto 2em auto;
+    padding: 1.2em;
+    background: #f0f4fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #bfcbe5aa;
+}
+
+form#kontakt-form label {
+    font-weight: 500;
+    color: #2a4480;
+}
+
+form#kontakt-form input,
+form#kontakt-form textarea {
+    width: 100%;
+    padding: 0.6em;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    border: 1px solid #b5c5e0;
+    border-radius: 5px;
+    background: #f9fbfe;
+    font-size: 1em;
+    transition: border-color .18s;
+}
+
+form#kontakt-form input:focus,
+form#kontakt-form textarea:focus {
+    border-color: #2a4480;
+    outline: none;
+}
+
+#form-erfolg {
+    margin-top: 1em;
+    color: #1ca94a;
+    font-weight: 600;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    color: #6a7aa0;
+    padding: 1.3em 0 1.1em 0;
+    background: #eaeaea;
+    margin-top: 2.5em;
+    font-size: 1em;
+    border-radius: 0 0 18px 18px;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px #bfcbe544;
+}
+
+.contact-info {
+    margin-top: 2em;
+    font-size: 1.12em;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 1em 0.5em;
+    }
+    section.produkte {
+        flex-direction: column;
+        gap: 1.5em;
+        align-items: center;
+    }
+    .produkt {
+        min-width: unset;
+        width: 95%;
+    }
+    header h1 {
+        font-size: 1.4em;
+    }
+}
