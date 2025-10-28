@@ -1,86 +1,72 @@
 [
   {
     "id": "biertischgarnitur",
-    "title": "Biertischgarnitur",
+    "title": "Biertischgarnitur mieten in Chemnitz",
     "category": "Mietmöbel",
-    "price": 10,
-    "unit": "Tag",
     "image": "biertischgarnitur.jpg",
-    "alt": "Biertischgarnitur Chemnitz – Tisch und zwei Bänke",
-    "link": ""
+    "price": "10 €/Tag",
+    "meta": "Set: 1 Tisch (220 × 50 cm) + 2 Bänke | Stabil, für 8–10 Personen | Ideal für Partys, Garten, Feste in Chemnitz",
+    "topseller": true
   },
   {
     "id": "zelt-3x6",
-    "title": "Festzelt 3×6 m (Schwarz)",
-    "category": "Zelte und Pavillions",
-    "price": 40,
-    "unit": "Tag",
+    "title": "Festzelt 3×6 m (Schwarz) mieten in Chemnitz",
+    "category": "Zelte und Pavillons",
     "image": "zelt-3x6.jpeg",
-    "alt": "Festzelt 3x6 Meter mieten Chemnitz",
-    "link": ""
+    "price": "40 €/Tag",
+    "meta": "Größe: 3 × 6 m | Farbe: Schwarz | Aufbau & Lieferung in Chemnitz auf Anfrage"
   },
   {
     "id": "zelt-4x8",
-    "title": "Festzelt 4×8 m (Schwarz)",
-    "category": "Zelte und Pavillions",
-    "price": 50,
-    "unit": "Tag",
+    "title": "Festzelt 4×8 m (Schwarz) mieten in Chemnitz",
+    "category": "Zelte und Pavillons",
     "image": "zelt-4x8.jpeg",
-    "alt": "Festzelt 4x8 Meter mieten Chemnitz",
-    "link": ""
+    "price": "50 €/Tag",
+    "meta": "Größe: 4 × 8 m | Farbe: Schwarz | Aufbau & Lieferung in Chemnitz auf Anfrage"
   },
   {
     "id": "pavillon-3x3",
-    "title": "Pavillon 3×3 m (Schwarz)",
-    "category": "Zelte und Pavillions",
-    "price": 25,
-    "unit": "Tag",
+    "title": "Pavillon 3×3 m (Schwarz) mieten in Chemnitz",
+    "category": "Zelte und Pavillons",
     "image": "pavillon-3x3.jpeg",
-    "alt": "Pavillon 3x3 Meter mieten Chemnitz",
-    "link": ""
+    "price": "25 €/Tag",
+    "meta": "Größe: 3 × 3 m | Farbe: Schwarz | Aufbau & Lieferung in Chemnitz auf Anfrage"
   },
   {
     "id": "heizplatte",
-    "title": "Heizplatte Tarrington House",
+    "title": "Heizplatte Tarrington House mieten",
     "category": "Gastrozubehör",
-    "price": 10,
-    "unit": "Tag",
     "image": "heizplatte.jpg",
-    "alt": "Heizplatte Tarrington House",
-    "link": "heizplatte.html"
+    "price": "10 €/Tag",
+    "meta": "Leistung: 2000 W | Hersteller: Tarrington House"
   },
   {
     "id": "kaffeekanne",
-    "title": "Kaffeekanne",
+    "title": "Kaffeekanne mieten",
     "category": "Gastrozubehör",
-    "price": 1,
-    "unit": "Tag",
     "image": "kaffeekanne.jpg",
-    "alt": "Kaffeekanne mieten",
-    "link": "kaffeekanne.html"
+    "price": "1 €/Tag",
+    "meta": "Ideal für Veranstaltungen, Feiern & Meetings"
   },
   {
     "id": "heizstrahler",
-    "title": "Heizstrahler (elektrisch)",
+    "title": "Heizstrahler (elektrisch) mieten",
     "category": "Zubehör",
-    "price": 15,
-    "unit": "Tag",
     "image": "heizstrahler.jpg",
-    "alt": "Elektrischer Heizstrahler",
-    "link": "heizstrahler.html"
+    "price": "15 €/Tag",
+    "meta": "Elektrisch betrieben | Für Innen- und Außenbereich geeignet"
   },
   {
     "id": "bierzapfanlage",
-    "title": "Bierzapfanlage",
+    "title": "Bierzapfanlage mieten",
     "category": "Gastrozubehör",
-    "price": 80,
-    "unit": "Tag",
     "image": "bierzapfanlage.jpg",
-    "alt": "Bierzapfanlage",
-    "link": "bierzapfanlage.html",
-    "note": "Reinigungskosten 20 € einmalig"
+    "price": "80 €/Tag",
+    "note": "Reinigungskosten: 20 € (einmalig)",
+    "meta": "Professionelle Zapfanlage für Feste & Feiern"
   },
   {
+
     "id": "Glühweinkocher",
     "title": "Glühweinkocher 25 l",
     "category": "Gastrozubehör",
@@ -89,35 +75,37 @@
     "image": "Glühweinkocher.jpg",
     "alt": "Weinkocher 25 Liter",
     "link": "weinkocher.html"
+=======
+    "id": "Glühweinkocher",
+    "title": "Glühweinkocher 25 l mieten",
+    "category": "Gastrozubehör",
+    "image": "Glühweinkocher.jpg",
+    "price": "5 €/Tag",
+    "meta": "Fassungsvermögen: 25 Liter | Ideal für Glühwein & Heißgetränke"
+
   },
   {
     "id": "weinkuehler-ton",
-    "title": "Weinkühler (Ton)",
+    "title": "Weinkühler (Ton) mieten",
     "category": "Gastrozubehör",
-    "price": 0.5,
-    "unit": "Tag",
     "image": "weinkuehler-ton.jpg",
-    "alt": "Weinkühler aus Ton",
-    "link": "weinkuehler-ton.html"
+    "price": "0,5 €/Tag",
+    "meta": "Klassischer Weinkühler aus Ton"
   },
   {
     "id": "getraenkekuehler",
-    "title": "Getränkekühler",
+    "title": "Getränkekühler mieten",
     "category": "Gastrozubehör",
-    "price": 0.5,
-    "unit": "Tag",
     "image": "getraenkekuehler.jpg",
-    "alt": "Getränkekühler",
-    "link": "getraenkekuehler.html"
+    "price": "0,5 €/Tag",
+    "meta": "Für Flaschen & Dosen"
   },
   {
     "id": "gefriertruhe",
-    "title": "Gefriertruhe",
+    "title": "Gefriertruhe mieten",
     "category": "Gastrozubehör",
-    "price": 50,
-    "unit": "Tag",
     "image": "gefriertruhe.jpg",
-    "alt": "Gefriertruhe",
-    "link": "gefriertruhe.html"
+    "price": "50 €/Tag",
+    "meta": "Viel Stauraum für Eis & Lebensmittel"
   }
 ]
