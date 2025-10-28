@@ -1,220 +1,133 @@
-/**
- * products.js - Dynamic product renderer for BANKetTISCH
- * Loads products.json, groups by category, and renders interactive product cards
- */
+// products.js
+// Robustere Produkt-Lade-Logik mit API-Fallback und lokalem Mock.
+// Leg diese Datei an Stelle der bestehenden products.js im Repo (gleiches Verzeichnis wie produkte.html).
 
-(function() {
-  'use strict';
+(async function () {
+  const CONTAINER_ID = 'products-container';
+  const CATEGORY_FILTER_ID = 'category-filter';
+  const MOCK_URL = '/BANKetTISCH/products.mock.json'; // Pfad, damit GitHub Pages die Datei unter /BANKetTISCH/... findet
+  const API_BASE = (window.API_BASE || '').replace(/\/$/, '');
 
-  // Category order as specified
-  const CATEGORY_ORDER = [
-    'Mietmöbel',
-    'Dekoration und Verkleidung',
-    'Zubehör',
-    'Zelte und Pavillons',
-    'Personal',
-    'Gastrozubehör'
-  ];
-
-  // Fallback image for missing product images
-  const IMAGE_FALLBACK = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-family=%22Arial%22 font-size=%2214%22%3EBild nicht verfügbar%3C/text%3E%3C/svg%3E';
-
-  let currentFilter = 'all';
-  let productsData = [];
-
-  /**
-   * Load products from JSON with no-cache
-   */
-  async function loadProducts() {
-    try {
-      const response = await fetch('products.json?_=' + Date.now(), {
-        cache: 'no-cache'
-      });
-      
-      if (!response.ok) {
-        throw new Error('Failed to load products.json');
-      }
-      
-      productsData = await response.json();
-      renderCategoryFilter();
-      renderProducts();
-    } catch (error) {
-      console.error('Error loading products:', error);
-      showErrorMessage('Produkte konnten nicht geladen werden. Bitte versuchen Sie es später erneut.');
-    }
+  function el(tag, attrs = {}, html = '') {
+    const e = document.createElement(tag);
+    Object.keys(attrs).forEach(k => e.setAttribute(k, attrs[k]));
+    if (html) e.innerHTML = html;
+    return e;
   }
 
-  /**
-   * Show error message if products.json cannot be loaded
-   */
-  function showErrorMessage(message) {
-    const container = document.getElementById('products-container');
-    if (container) {
-      container.innerHTML = `
-        <div style="text-align: center; padding: 2em; color: #d32f2f; background: #ffebee; border-radius: 8px; margin: 2em 0;">
-          <strong>⚠️ ${message}</strong>
-        </div>
-      `;
-    }
+  function escapeHtml(s) {
+    return String(s || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
   }
 
-  /**
-   * Group products by category
-   */
-  function groupByCategory(products) {
-    const grouped = {};
-    
-    products.forEach(product => {
-      const category = product.category || 'Sonstige';
-      if (!grouped[category]) {
-        grouped[category] = [];
-      }
-      grouped[category].push(product);
-    });
-    
-    return grouped;
-  }
-
-  /**
-   * Render category filter buttons
-   */
-  function renderCategoryFilter() {
-    const filterContainer = document.getElementById('category-filter');
-    if (!filterContainer) return;
-
-    const grouped = groupByCategory(productsData);
-    const availableCategories = CATEGORY_ORDER.filter(cat => grouped[cat] && grouped[cat].length > 0);
-
-    let html = '<button class="filter-btn active" data-category="all">Alle Produkte</button>';
-    
-    availableCategories.forEach(category => {
-      const count = grouped[category].length;
-      html += `<button class="filter-btn" data-category="${escapeHtml(category)}">${escapeHtml(category)} (${count})</button>`;
-    });
-
-    filterContainer.innerHTML = html;
-
-    // Add click event listeners
-    filterContainer.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
-        // Update active state
-        filterContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        
-        // Update filter and re-render
-        currentFilter = this.getAttribute('data-category');
-        renderProducts();
-      });
-    });
-  }
-
-  /**
-   * Render products based on current filter
-   */
-  function renderProducts() {
-    const container = document.getElementById('products-container');
+  function showError(message) {
+    const container = document.getElementById(CONTAINER_ID);
     if (!container) return;
+    const box = el('div', { class: 'product-error', role: 'alert', style: 'background:#fde8e8;border:1px solid #f5c2c2;color:#b00000;padding:1rem;border-radius:6px;margin:1rem 0;text-align:center;' }, '⚠️ ' + escapeHtml(message));
+    const existing = container.querySelector('.product-error');
+    if (existing) existing.remove();
+    container.prepend(box);
+  }
 
-    const filtered = currentFilter === 'all' 
-      ? productsData 
-      : productsData.filter(p => p.category === currentFilter);
+  function clearError() {
+    const container = document.getElementById(CONTAINER_ID);
+    if (!container) return;
+    const existing = container.querySelector('.product-error');
+    if (existing) existing.remove();
+  }
 
-    if (filtered.length === 0) {
-      container.innerHTML = `
-        <div style="text-align: center; padding: 2em; color: #666; background: #f5f5f5; border-radius: 8px; margin: 2em 0;">
-          <p>Keine Produkte in dieser Kategorie verfügbar.</p>
-        </div>
-      `;
+  function renderProducts(products) {
+    const container = document.getElementById(CONTAINER_ID);
+    if (!container) return;
+    container.innerHTML = ''; // clear loading state
+    if (!Array.isArray(products) || products.length === 0) {
+      container.appendChild(el('div', { class: 'alert-info', style: 'color:#666;padding:1rem;text-align:center;' }, 'Keine Produkte verfügbar.'));
       return;
     }
 
-    const grouped = groupByCategory(filtered);
-    let html = '';
+    const grid = el('div', { class: 'product-grid', style: 'display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;' });
 
-    // Render categories in specified order
-    CATEGORY_ORDER.forEach(category => {
-      if (grouped[category] && grouped[category].length > 0) {
-        html += `<section class="category-section" aria-labelledby="cat-${slugify(category)}">`;
-        html += `<h2 id="cat-${slugify(category)}" class="category-title">${escapeHtml(category)}</h2>`;
-        html += '<div class="product-grid">';
-        
-        grouped[category].forEach(product => {
-          html += renderProductCard(product);
-        });
-        
-        html += '</div></section>';
-      }
+    products.forEach(p => {
+      const imgSrc = p.image || '/BANKetTISCH/images/placeholder.jpg';
+      const slug = p.slug ? encodeURIComponent(p.slug) : String(p.id);
+      const card = el('article', { class: 'product-card', style: 'background:#fff;border-radius:8px;padding:0.75rem;box-shadow:0 1px 4px rgba(0,0,0,0.05);' });
+      const link = el('a', { href: `/BANKetTISCH/${slug}.html`, class: 'product-link', style: 'color:inherit;text-decoration:none;display:block;' });
+      const imgWrap = el('div', { class: 'product-image-wrap', style: 'height:140px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f7f7;border-radius:6px;margin-bottom:0.5rem;' });
+      const img = el('img', { src: imgSrc, alt: escapeHtml(p.title || ''), style: 'max-width:100%;max-height:100%;object-fit:cover;' });
+      imgWrap.appendChild(img);
+      link.appendChild(imgWrap);
+      link.appendChild(el('h3', { style: 'margin:0 0 0.5rem 0;font-size:1.05rem;' }, escapeHtml(p.title || 'Produkt')));
+      card.appendChild(link);
+      if (p.description) card.appendChild(el('p', { style: 'margin:0 0 0.5rem;color:#555;font-size:0.95rem;' }, escapeHtml(p.description)));
+      if (p.price) card.appendChild(el('p', { style: 'margin:0;color:#1b7a3a;font-weight:600;' }, escapeHtml(p.price)));
+      grid.appendChild(card);
     });
 
-    container.innerHTML = html;
+    container.appendChild(grid);
+
+    // Optional: populate categories if present
+    const categories = Array.from(new Set((products || []).map(x => x.category).filter(Boolean)));
+    const catContainer = document.getElementById(CATEGORY_FILTER_ID);
+    if (catContainer && categories.length > 0) {
+      catContainer.innerHTML = '';
+      const allBtn = el('button', { type: 'button', class: 'cat-btn', style: 'margin-right:0.5rem;' }, 'Alle');
+      allBtn.addEventListener('click', () => renderProducts(products));
+      catContainer.appendChild(allBtn);
+      categories.forEach(cat => {
+        const btn = el('button', { type: 'button', class: 'cat-btn', style: 'margin-right:0.5rem;' }, escapeHtml(cat));
+        btn.addEventListener('click', () => renderProducts(products.filter(p => p.category === cat)));
+        catContainer.appendChild(btn);
+      });
+    }
   }
 
-  /**
-   * Render a single product card
-   */
-  function renderProductCard(product) {
-    const topseller = product.topseller ? '<div class="topseller-label">Topseller</div>' : '';
-    const topsellerClass = product.topseller ? ' topseller' : '';
-    const note = product.note ? `<p class="product-note">${escapeHtml(product.note)}</p>` : '';
-    const meta = product.meta ? `<p class="product-meta">${escapeHtml(product.meta)}</p>` : '';
-    
-    // WhatsApp message
-    const whatsappText = encodeURIComponent(`Hallo! Ich interessiere mich für: ${product.title}`);
-    const whatsappLink = `https://wa.me/491727323405?text=${whatsappText}`;
-
-    return `
-      <article class="produkt product-card${topsellerClass}">
-        ${topseller}
-        <img 
-          src="${escapeHtml(product.image)}" 
-          alt="${escapeHtml(product.title)}"
-          loading="lazy"
-          onerror="this.onerror=null; this.src='${IMAGE_FALLBACK}'; this.alt='Bild nicht verfügbar';"
-        >
-        <h3 class="product-title">${escapeHtml(product.title)}</h3>
-        ${meta}
-        ${note}
-        <p class="product-price"><strong>${escapeHtml(product.price)}</strong></p>
-        <a 
-          href="${whatsappLink}" 
-          class="button whatsapp-btn product-whatsapp-btn" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          aria-label="Per WhatsApp anfragen: ${escapeHtml(product.title)}"
-        >
-          📱 Jetzt anfragen
-        </a>
-      </article>
-    `;
+  async function fetchJson(url, opts = {}) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000); // 10s timeout
+    try {
+      const res = await fetch(url, Object.assign({}, opts, { signal: controller.signal }));
+      clearTimeout(timeout);
+      if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
+      return await res.json();
+    } finally {
+      clearTimeout(timeout);
+    }
   }
 
-  /**
-   * Escape HTML to prevent XSS
-   */
-  function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+  // boot
+  const container = document.getElementById(CONTAINER_ID);
+  if (container) container.innerHTML = '<div style="text-align:center;padding:2rem;color:#666;">Produkte werden geladen…</div>';
+  clearError();
+
+  // 1) try remote API if configured
+  if (API_BASE) {
+    try {
+      const data = await fetchJson(`${API_BASE.replace(/\/$/, '')}/products`);
+      const products = Array.isArray(data) ? data : (data.products || []);
+      renderProducts(products);
+      clearError();
+      return;
+    } catch (err) {
+      console.warn('API fetch failed:', err && err.message);
+      showError('Produkte konnten nicht von der API geladen werden. Es werden lokale Daten verwendet.');
+      // fall through to mock
+    }
   }
 
-  /**
-   * Create URL-safe slug from text
-   */
-  function slugify(text) {
-    return text
-      .toLowerCase()
-      .replace(/[äÄ]/g, 'ae')
-      .replace(/[öÖ]/g, 'oe')
-      .replace(/[üÜ]/g, 'ue')
-      .replace(/ß/g, 'ss')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-|-$/g, '');
-  }
-
-  // Initialize when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadProducts);
-  } else {
-    loadProducts();
+  // 2) try local mock
+  try {
+    const local = await fetchJson(MOCK_URL);
+    const products = Array.isArray(local) ? local : (local.products || []);
+    renderProducts(products);
+    clearError();
+    return;
+  } catch (err) {
+    console.error('Local mock fetch failed:', err && err.message);
+    showError('Produkte konnten nicht geladen werden. Bitte versuchen Sie es später erneut.');
+    if (container) container.innerHTML = '';
   }
 })();
