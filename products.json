@@ -66,12 +66,23 @@
     "meta": "Professionelle Zapfanlage für Feste & Feiern"
   },
   {
-    "id": "weinkocher",
-    "title": "Weinkocher 25 l mieten",
+
+    "id": "Glühweinkocher",
+    "title": "Glühweinkocher 25 l",
     "category": "Gastrozubehör",
-    "image": "weinkocher.jpg",
+    "price": 5,
+    "unit": "Tag",
+    "image": "Glühweinkocher.jpg",
+    "alt": "Weinkocher 25 Liter",
+    "link": "weinkocher.html"
+=======
+    "id": "Glühweinkocher",
+    "title": "Glühweinkocher 25 l mieten",
+    "category": "Gastrozubehör",
+    "image": "Glühweinkocher.jpg",
     "price": "5 €/Tag",
     "meta": "Fassungsvermögen: 25 Liter | Ideal für Glühwein & Heißgetränke"
+
   },
   {
     "id": "weinkuehler-ton",
