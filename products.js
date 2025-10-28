@@ -11,10 +11,13 @@
     'Mietmöbel',
     'Dekoration und Verkleidung',
     'Zubehör',
-    'Zelte und Pavillions',
+    'Zelte und Pavillons',
     'Personal',
     'Gastrozubehör'
   ];
+
+  // Fallback image for missing product images
+  const IMAGE_FALLBACK = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-family=%22Arial%22 font-size=%2214%22%3EBild nicht verfügbar%3C/text%3E%3C/svg%3E';
 
   let currentFilter = 'all';
   let productsData = [];
@@ -166,7 +169,7 @@
           src="${escapeHtml(product.image)}" 
           alt="${escapeHtml(product.title)}"
           loading="lazy"
-          onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-family=%22Arial%22 font-size=%2214%22%3EBild nicht verfügbar%3C/text%3E%3C/svg%3E'; this.alt='Bild nicht verfügbar';"
+          onerror="this.onerror=null; this.src='${IMAGE_FALLBACK}'; this.alt='Bild nicht verfügbar';"
         >
         <h3 class="product-title">${escapeHtml(product.title)}</h3>
         ${meta}
