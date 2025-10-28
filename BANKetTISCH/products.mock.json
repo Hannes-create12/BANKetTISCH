@@ -3,18 +3,108 @@
     "id": 1,
     "title": "Biertischgarnitur (1x)",
     "slug": "biertischgarnitur",
-    "price": "10,00 €",
-    "image": "/BANKetTISCH/images/biertischgarnitur.jpg",
-    "description": "Standard Biertischgarnitur für Veranstaltungen",
-    "category": "Möbel"
+    "price": "10,00 €/Tag",
+    "image": "/BANKetTISCH/biertischgarnitur.jpg",
+    "description": "Set: 1 Tisch (220 × 50 cm) + 2 Bänke | Stabil, für 8–10 Personen",
+    "category": "Mietmöbel"
   },
   {
     "id": 2,
-    "title": "Partyzelt (4x4m)",
-    "slug": "party-zelt-4x4",
-    "price": "120,00 €",
-    "image": "/BANKetTISCH/images/party-zelt.jpg",
-    "description": "Wetterfestes 4x4m Zelt inkl. Aufbau",
-    "category": "Zelte"
+    "title": "Festzelt 3×6 m (Schwarz)",
+    "slug": "zelt-3x6",
+    "price": "40,00 €/Tag",
+    "image": "/BANKetTISCH/zelt-3x6.jpeg",
+    "description": "Größe: 3 × 6 m | Farbe: Schwarz | Aufbau & Lieferung auf Anfrage",
+    "category": "Zelte und Pavillons"
+  },
+  {
+    "id": 3,
+    "title": "Festzelt 4×8 m (Schwarz)",
+    "slug": "zelt-4x8",
+    "price": "50,00 €/Tag",
+    "image": "/BANKetTISCH/zelt-4x8.jpeg",
+    "description": "Größe: 4 × 8 m | Farbe: Schwarz | Aufbau & Lieferung auf Anfrage",
+    "category": "Zelte und Pavillons"
+  },
+  {
+    "id": 4,
+    "title": "Pavillon 3×3 m (Schwarz)",
+    "slug": "pavillon-3x3",
+    "price": "25,00 €/Tag",
+    "image": "/BANKetTISCH/pavillon-3x3.jpeg",
+    "description": "Größe: 3 × 3 m | Farbe: Schwarz | Aufbau & Lieferung auf Anfrage",
+    "category": "Zelte und Pavillons"
+  },
+  {
+    "id": 5,
+    "title": "Heizstrahler (elektrisch)",
+    "slug": "heizstrahler",
+    "price": "15,00 €/Tag",
+    "image": "/BANKetTISCH/heizstrahler.jpg",
+    "description": "Elektrisch betrieben | Für Innen- und Außenbereich geeignet",
+    "category": "Zubehör"
+  },
+  {
+    "id": 6,
+    "title": "Heizplatte Tarrington House",
+    "slug": "heizplatte",
+    "price": "10,00 €/Tag",
+    "image": "/BANKetTISCH/heizplatte.jpg",
+    "description": "Leistung: 2000 W | Hersteller: Tarrington House",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 7,
+    "title": "Kaffeekanne",
+    "slug": "kaffeekanne",
+    "price": "1,00 €/Tag",
+    "image": "/BANKetTISCH/kaffeekanne.jpg",
+    "description": "Ideal für Veranstaltungen, Feiern & Meetings",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 8,
+    "title": "Bierzapfanlage",
+    "slug": "bierzapfanlage",
+    "price": "80,00 €/Tag",
+    "image": "/BANKetTISCH/bierzapfanlage.jpg",
+    "description": "Professionelle Zapfanlage für Feste & Feiern | Reinigungskosten: 20 € (einmalig)",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 9,
+    "title": "Weinkocher 25 l",
+    "slug": "weinkocher",
+    "price": "5,00 €/Tag",
+    "image": "/BANKetTISCH/weinkocher.jpg",
+    "description": "Fassungsvermögen: 25 Liter | Ideal für Glühwein & Heißgetränke",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 10,
+    "title": "Weinkühler (Ton)",
+    "slug": "weinkuehler-ton",
+    "price": "0,50 €/Tag",
+    "image": "/BANKetTISCH/weinkuehler-ton.jpg",
+    "description": "Klassischer Weinkühler aus Ton",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 11,
+    "title": "Getränkekühler",
+    "slug": "getraenkekuehler",
+    "price": "0,50 €/Tag",
+    "image": "/BANKetTISCH/getraenkekuehler.jpg",
+    "description": "Für Flaschen & Dosen",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 12,
+    "title": "Gefriertruhe",
+    "slug": "gefriertruhe",
+    "price": "50,00 €/Tag",
+    "image": "/BANKetTISCH/gefriertruhe.jpg",
+    "description": "Viel Stauraum für Eis & Lebensmittel",
+    "category": "Gastrozubehör"
   }
 ]
