@@ -36,7 +36,7 @@
     "id": "heizplatte",
     "title": "Heizplatte Tarrington House mieten",
     "category": "Gastrozubehör",
-    "image": "heizplatte.jpg",
+    "image": "heizplatte.jpeg",
     "price": "10 €/Tag",
     "meta": "Leistung: 2000 W | Hersteller: Tarrington House"
   },
@@ -44,7 +44,7 @@
     "id": "kaffeekanne",
     "title": "Kaffeekanne mieten",
     "category": "Gastrozubehör",
-    "image": "kaffeekanne.jpg",
+    "image": "kaffeekanne.jpeg",
     "price": "1 €/Tag",
     "meta": "Ideal für Veranstaltungen, Feiern & Meetings"
   },
@@ -52,7 +52,7 @@
     "id": "heizstrahler",
     "title": "Heizstrahler (elektrisch) mieten",
     "category": "Zubehör",
-    "image": "heizstrahler.jpg",
+    "image": "heizstrahler.jpeg",
     "price": "15 €/Tag",
     "meta": "Elektrisch betrieben | Für Innen- und Außenbereich geeignet"
   },
@@ -60,7 +60,7 @@
     "id": "bierzapfanlage",
     "title": "Bierzapfanlage mieten",
     "category": "Gastrozubehör",
-    "image": "bierzapfanlage.jpg",
+    "image": "bierzapfanlage.jpeg",
     "price": "80 €/Tag",
     "note": "Reinigungskosten: 20 € (einmalig)",
     "meta": "Professionelle Zapfanlage für Feste & Feiern"
@@ -72,14 +72,14 @@
     "category": "Gastrozubehör",
     "price": 5,
     "unit": "Tag",
-    "image": "Glühweinkocher.jpg",
+    "image": "Glühweinkocher.jpeg",
     "alt": "Weinkocher 25 Liter",
     "link": "weinkocher.html"
 =======
     "id": "Glühweinkocher",
     "title": "Glühweinkocher 25 l mieten",
     "category": "Gastrozubehör",
-    "image": "Glühweinkocher.jpg",
+    "image": "Glühweinkocher.jpeg",
     "price": "5 €/Tag",
     "meta": "Fassungsvermögen: 25 Liter | Ideal für Glühwein & Heißgetränke"
 
@@ -88,7 +88,7 @@
     "id": "weinkuehler-ton",
     "title": "Weinkühler (Ton) mieten",
     "category": "Gastrozubehör",
-    "image": "weinkuehler-ton.jpg",
+    "image": "weinkuehler-ton.jpeg",
     "price": "0,5 €/Tag",
     "meta": "Klassischer Weinkühler aus Ton"
   },
@@ -96,7 +96,7 @@
     "id": "getraenkekuehler",
     "title": "Getränkekühler mieten",
     "category": "Gastrozubehör",
-    "image": "getraenkekuehler.jpg",
+    "image": "getraenkekuehler.jpeg",
     "price": "0,5 €/Tag",
     "meta": "Für Flaschen & Dosen"
   },
@@ -104,7 +104,7 @@
     "id": "gefriertruhe",
     "title": "Gefriertruhe mieten",
     "category": "Gastrozubehör",
-    "image": "gefriertruhe.jpg",
+    "image": "gefriertruhe.jpeg",
     "price": "50 €/Tag",
     "meta": "Viel Stauraum für Eis & Lebensmittel"
   }
