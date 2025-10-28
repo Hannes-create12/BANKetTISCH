@@ -1,0 +1,123 @@
+[
+  {
+    "id": "biertischgarnitur",
+    "title": "Biertischgarnitur",
+    "category": "Mietmöbel",
+    "price": 10,
+    "unit": "Tag",
+    "image": "biertischgarnitur.jpg",
+    "alt": "Biertischgarnitur Chemnitz – Tisch und zwei Bänke",
+    "link": ""
+  },
+  {
+    "id": "zelt-3x6",
+    "title": "Festzelt 3×6 m (Schwarz)",
+    "category": "Zelte und Pavillions",
+    "price": 40,
+    "unit": "Tag",
+    "image": "zelt-3x6.jpeg",
+    "alt": "Festzelt 3x6 Meter mieten Chemnitz",
+    "link": ""
+  },
+  {
+    "id": "zelt-4x8",
+    "title": "Festzelt 4×8 m (Schwarz)",
+    "category": "Zelte und Pavillions",
+    "price": 50,
+    "unit": "Tag",
+    "image": "zelt-4x8.jpeg",
+    "alt": "Festzelt 4x8 Meter mieten Chemnitz",
+    "link": ""
+  },
+  {
+    "id": "pavillon-3x3",
+    "title": "Pavillon 3×3 m (Schwarz)",
+    "category": "Zelte und Pavillions",
+    "price": 25,
+    "unit": "Tag",
+    "image": "pavillon-3x3.jpeg",
+    "alt": "Pavillon 3x3 Meter mieten Chemnitz",
+    "link": ""
+  },
+  {
+    "id": "heizplatte",
+    "title": "Heizplatte Tarrington House",
+    "category": "Gastrozubehör",
+    "price": 10,
+    "unit": "Tag",
+    "image": "heizplatte.jpg",
+    "alt": "Heizplatte Tarrington House",
+    "link": "heizplatte.html"
+  },
+  {
+    "id": "kaffeekanne",
+    "title": "Kaffeekanne",
+    "category": "Gastrozubehör",
+    "price": 1,
+    "unit": "Tag",
+    "image": "kaffeekanne.jpg",
+    "alt": "Kaffeekanne mieten",
+    "link": "kaffeekanne.html"
+  },
+  {
+    "id": "heizstrahler",
+    "title": "Heizstrahler (elektrisch)",
+    "category": "Zubehör",
+    "price": 15,
+    "unit": "Tag",
+    "image": "heizstrahler.jpg",
+    "alt": "Elektrischer Heizstrahler",
+    "link": "heizstrahler.html"
+  },
+  {
+    "id": "bierzapfanlage",
+    "title": "Bierzapfanlage",
+    "category": "Gastrozubehör",
+    "price": 80,
+    "unit": "Tag",
+    "image": "bierzapfanlage.jpg",
+    "alt": "Bierzapfanlage",
+    "link": "bierzapfanlage.html",
+    "note": "Reinigungskosten 20 € einmalig"
+  },
+  {
+    "id": "weinkocher",
+    "title": "Weinkocher 25 l",
+    "category": "Gastrozubehör",
+    "price": 5,
+    "unit": "Tag",
+    "image": "weinkocher.jpg",
+    "alt": "Weinkocher 25 Liter",
+    "link": "weinkocher.html"
+  },
+  {
+    "id": "weinkuehler-ton",
+    "title": "Weinkühler (Ton)",
+    "category": "Gastrozubehör",
+    "price": 0.5,
+    "unit": "Tag",
+    "image": "weinkuehler-ton.jpg",
+    "alt": "Weinkühler aus Ton",
+    "link": "weinkuehler-ton.html"
+  },
+  {
+    "id": "getraenkekuehler",
+    "title": "Getränkekühler",
+    "category": "Gastrozubehör",
+    "price": 0.5,
+    "unit": "Tag",
+    "image": "getraenkekuehler.jpg",
+    "alt": "Getränkekühler",
+    "link": "getraenkekuehler.html"
+  },
+  {
+    "id": "gefriertruhe",
+    "title": "Gefriertruhe",
+    "category": "Gastrozubehör",
+    "price": 50,
+    "unit": "Tag",
+    "image": "gefriertruhe.jpg",
+    "alt": "Gefriertruhe",
+    "link": "gefriertruhe.html"
+  }
+]
