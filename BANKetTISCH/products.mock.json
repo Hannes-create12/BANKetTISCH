@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Biertischgarnitur (1x)",
+    "slug": "biertischgarnitur",
+    "price": "10,00 €",
+    "image": "/BANKetTISCH/images/biertischgarnitur.jpg",
+    "description": "Standard Biertischgarnitur für Veranstaltungen",
+    "category": "Möbel"
+  },
+  {
+    "id": 2,
+    "title": "Partyzelt (4x4m)",
+    "slug": "party-zelt-4x4",
+    "price": "120,00 €",
+    "image": "/BANKetTISCH/images/party-zelt.jpg",
+    "description": "Wetterfestes 4x4m Zelt inkl. Aufbau",
+    "category": "Zelte"
+  }
+]
