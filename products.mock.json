@@ -151,5 +151,14 @@
     "image": "/BANKetTISCH/images/placeholder.jpg",
     "description": "Professionelle Moderation für Ihre Veranstaltung",
     "category": "Personal"
+  },
+  {
+    "id": 18,
+    "title": "Eventplanung",
+    "slug": "eventplanung",
+    "price": "50,00 €/Stunde",
+    "image": "/BANKetTISCH/images/placeholder.jpg",
+    "description": "Professionelle Eventplanung für Ihre Veranstaltung",
+    "category": "Personal"
   }
 ]

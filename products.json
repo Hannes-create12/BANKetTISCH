@@ -136,5 +136,13 @@
     "image": "images/placeholder.jpg",
     "price": "30 €/Stunde",
     "meta": "Professionelle Moderation für Ihre Veranstaltung"
+  },
+  {
+    "id": "eventplanung",
+    "title": "Eventplanung",
+    "category": "Personal",
+    "image": "images/placeholder.jpg",
+    "price": "50 €/Stunde",
+    "meta": "Professionelle Eventplanung für Ihre Veranstaltung"
   }
 ]
