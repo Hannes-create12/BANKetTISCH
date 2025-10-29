@@ -101,7 +101,7 @@
     "id": "servicekraefte",
     "title": "Servicekräfte",
     "category": "Personal",
-    "image": "images/placeholder.jpg",
+    "image": "servicekräfte.jpeg",
     "price": "22 €/Stunde",
     "meta": "Professionelle Servicekräfte für Ihre Veranstaltung"
   },
@@ -109,7 +109,7 @@
     "id": "barkeeper",
     "title": "Barkeeper",
     "category": "Personal",
-    "image": "images/placeholder.jpg",
+    "image": "barkeeper.jpeg",
     "price": "25 €/Stunde",
     "meta": "Erfahrene Barkeeper für Ihre Bar"
   },
@@ -117,7 +117,7 @@
     "id": "security",
     "title": "Security",
     "category": "Personal",
-    "image": "images/placeholder.jpg",
+    "image": "security.jpeg",
     "price": "25 €/Stunde",
     "meta": "Professioneller Sicherheitsdienst für Ihre Veranstaltung"
   },
@@ -133,7 +133,7 @@
     "id": "moderation",
     "title": "Moderation",
     "category": "Personal",
-    "image": "images/placeholder.jpg",
+    "image": "moderation.jpeg",
     "price": "30 €/Stunde",
     "meta": "Professionelle Moderation für Ihre Veranstaltung"
   },
@@ -141,7 +141,7 @@
     "id": "eventplanung",
     "title": "Eventplanung",
     "category": "Personal",
-    "image": "images/placeholder.jpg",
+    "image": "eventplanung.jpg",
     "price": "50 €/Stunde",
     "meta": "Professionelle Eventplanung für Ihre Veranstaltung"
   }
