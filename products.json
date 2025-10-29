@@ -66,23 +66,12 @@
     "meta": "Professionelle Zapfanlage für Feste & Feiern"
   },
   {
-
-    "id": "Glühweinkocher",
-    "title": "Glühweinkocher 25 l",
-    "category": "Gastrozubehör",
-    "price": 5,
-    "unit": "Tag",
-    "image": "Glühweinkocher.jpeg",
-    "alt": "Weinkocher 25 Liter",
-    "link": "weinkocher.html"
-=======
     "id": "Glühweinkocher",
     "title": "Glühweinkocher 25 l mieten",
     "category": "Gastrozubehör",
     "image": "Glühweinkocher.jpeg",
     "price": "5 €/Tag",
     "meta": "Fassungsvermögen: 25 Liter | Ideal für Glühwein & Heißgetränke"
-
   },
   {
     "id": "weinkuehler-ton",
@@ -107,5 +96,45 @@
     "image": "gefriertruhe.jpeg",
     "price": "50 €/Tag",
     "meta": "Viel Stauraum für Eis & Lebensmittel"
+  },
+  {
+    "id": "servicekraefte",
+    "title": "Servicekräfte",
+    "category": "Personal",
+    "image": "images/placeholder.jpg",
+    "price": "22 €/Stunde",
+    "meta": "Professionelle Servicekräfte für Ihre Veranstaltung"
+  },
+  {
+    "id": "barkeeper",
+    "title": "Barkeeper",
+    "category": "Personal",
+    "image": "images/placeholder.jpg",
+    "price": "25 €/Stunde",
+    "meta": "Erfahrene Barkeeper für Ihre Bar"
+  },
+  {
+    "id": "security",
+    "title": "Security",
+    "category": "Personal",
+    "image": "images/placeholder.jpg",
+    "price": "25 €/Stunde",
+    "meta": "Professioneller Sicherheitsdienst für Ihre Veranstaltung"
+  },
+  {
+    "id": "dj-phil",
+    "title": "DJ Phil",
+    "category": "Personal",
+    "image": "images/placeholder.jpg",
+    "price": "450 €/Abend",
+    "meta": "DJ Phil sorgt für die perfekte musikalische Untermalung Ihres Events"
+  },
+  {
+    "id": "moderation",
+    "title": "Moderation",
+    "category": "Personal",
+    "image": "images/placeholder.jpg",
+    "price": "30 €/Stunde",
+    "meta": "Professionelle Moderation für Ihre Veranstaltung"
   }
 ]

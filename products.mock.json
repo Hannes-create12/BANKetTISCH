@@ -106,5 +106,50 @@
     "image": "/BANKetTISCH/gefriertruhe.jpeg",
     "description": "Viel Stauraum für Eis & Lebensmittel",
     "category": "Gastrozubehör"
+  },
+  {
+    "id": 13,
+    "title": "Servicekräfte",
+    "slug": "servicekraefte",
+    "price": "22,00 €/Stunde",
+    "image": "/BANKetTISCH/images/placeholder.jpg",
+    "description": "Professionelle Servicekräfte für Ihre Veranstaltung",
+    "category": "Personal"
+  },
+  {
+    "id": 14,
+    "title": "Barkeeper",
+    "slug": "barkeeper",
+    "price": "25,00 €/Stunde",
+    "image": "/BANKetTISCH/images/placeholder.jpg",
+    "description": "Erfahrene Barkeeper für Ihre Bar",
+    "category": "Personal"
+  },
+  {
+    "id": 15,
+    "title": "Security",
+    "slug": "security",
+    "price": "25,00 €/Stunde",
+    "image": "/BANKetTISCH/images/placeholder.jpg",
+    "description": "Professioneller Sicherheitsdienst für Ihre Veranstaltung",
+    "category": "Personal"
+  },
+  {
+    "id": 16,
+    "title": "DJ Phil",
+    "slug": "dj-phil",
+    "price": "450,00 €/Abend",
+    "image": "/BANKetTISCH/images/placeholder.jpg",
+    "description": "DJ Phil sorgt für die perfekte musikalische Untermalung Ihres Events",
+    "category": "Personal"
+  },
+  {
+    "id": 17,
+    "title": "Moderation",
+    "slug": "moderation",
+    "price": "30,00 €/Stunde",
+    "image": "/BANKetTISCH/images/placeholder.jpg",
+    "description": "Professionelle Moderation für Ihre Veranstaltung",
+    "category": "Personal"
   }
 ]
