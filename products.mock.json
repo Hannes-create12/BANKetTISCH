@@ -112,7 +112,7 @@
     "title": "Servicekräfte",
     "slug": "servicekraefte",
     "price": "22,00 €/Stunde",
-    "image": "/BANKetTISCH/images/placeholder.jpg",
+    "image": "servicekräfte.jpeg",
     "description": "Professionelle Servicekräfte für Ihre Veranstaltung",
     "category": "Personal"
   },
@@ -121,7 +121,7 @@
     "title": "Barkeeper",
     "slug": "barkeeper",
     "price": "25,00 €/Stunde",
-    "image": "/BANKetTISCH/images/placeholder.jpg",
+    "image": "barkeeper.jpeg",
     "description": "Erfahrene Barkeeper für Ihre Bar",
     "category": "Personal"
   },
@@ -130,7 +130,7 @@
     "title": "Security",
     "slug": "security",
     "price": "25,00 €/Stunde",
-    "image": "/BANKetTISCH/images/placeholder.jpg",
+    "image": "security.jpeg",
     "description": "Professioneller Sicherheitsdienst für Ihre Veranstaltung",
     "category": "Personal"
   },
@@ -139,7 +139,7 @@
     "title": "DJ Phil",
     "slug": "dj-phil",
     "price": "450,00 €/Abend",
-    "image": "/BANKetTISCH/images/placeholder.jpg",
+    "image": "/BANKetTISCH/images/placeholder.jpeg",
     "description": "DJ Phil sorgt für die perfekte musikalische Untermalung Ihres Events",
     "category": "Personal"
   },
@@ -148,7 +148,7 @@
     "title": "Moderation",
     "slug": "moderation",
     "price": "30,00 €/Stunde",
-    "image": "/BANKetTISCH/images/placeholder.jpg",
+    "image": "moderation.jpeg",
     "description": "Professionelle Moderation für Ihre Veranstaltung",
     "category": "Personal"
   },
@@ -157,7 +157,7 @@
     "title": "Eventplanung",
     "slug": "eventplanung",
     "price": "50,00 €/Stunde",
-    "image": "/BANKetTISCH/images/placeholder.jpg",
+    "image":"eventplanung.jpeg",
     "description": "Professionelle Eventplanung für Ihre Veranstaltung",
     "category": "Personal"
   }
