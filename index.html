@@ -2,12 +2,66 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Event- und Partyverleih Chemnitz – BANKetTISCH</title>
     <meta name="description" content="Event- und Partyverleih Chemnitz: Zelte, Pavillons, Biertischgarnituren mieten in Chemnitz und Umgebung. Persönliche Beratung, Lieferung & Aufbau.">
     <meta name="keywords" content="Eventverleih Chemnitz, Partyverleih Chemnitz, Festzelt mieten Chemnitz, Pavillon mieten Chemnitz, Biertischgarnitur Chemnitz, Zelte Chemnitz, Partyzubehör Chemnitz">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bankettisch-chemnitz.de/">
+    <meta property="og:title" content="Event- und Partyverleih Chemnitz – BANKetTISCH">
+    <meta property="og:description" content="Event- und Partyverleih Chemnitz: Zelte, Pavillons, Biertischgarnituren mieten in Chemnitz und Umgebung. Persönliche Beratung, Lieferung & Aufbau.">
+    <meta property="og:image" content="https://www.bankettisch-chemnitz.de/biertischgarnitur.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.bankettisch-chemnitz.de/">
+    <meta property="twitter:title" content="Event- und Partyverleih Chemnitz – BANKetTISCH">
+    <meta property="twitter:description" content="Event- und Partyverleih Chemnitz: Zelte, Pavillons, Biertischgarnituren mieten in Chemnitz und Umgebung.">
+    <meta property="twitter:image" content="https://www.bankettisch-chemnitz.de/biertischgarnitur.jpg">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.bankettisch-chemnitz.de/">
+    
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "BANKetTISCH Event- und Partyverleih",
+      "description": "Event- und Partyverleih in Chemnitz: Zelte, Pavillons, Biertischgarnituren und mehr.",
+      "url": "https://www.bankettisch-chemnitz.de/",
+      "telephone": "+4915155539947",
+      "email": "BANKetTisch@web.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ferdinandstraße 46",
+        "addressLocality": "Chemnitz",
+        "postalCode": "09128",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "50.8278",
+        "longitude": "12.9214"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "priceRange": "€",
+      "areaServed": {
+        "@type": "City",
+        "name": "Chemnitz"
+      }
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -16,6 +70,7 @@
             <a href="index.html">Startseite</a>
             <a href="produkte.html">Produkte</a>
             <a href="kontakt.html">Kontakt</a>
+            <a href="impressum.html">Impressum</a>
         </nav>
     </header>
     <main>
@@ -35,6 +90,13 @@
         </ul>
         <a class="button" href="produkte.html">Unsere Mietartikel &rarr;</a>
         <br><br>
+        
+        <!-- Featured Products Section -->
+        <h3 style="margin-top: 2em;">Beliebte Produkte</h3>
+        <div id="product-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+            <p style="text-align: center; color: #666;">Produkte werden geladen...</p>
+        </div>
+        
         <a class="button whatsapp-btn" href="https://wa.me/4915155539947?text=Hallo!%20Ich%20interessiere%20mich%20für%20Event-%20und%20Partyverleih%20in%20Chemnitz.">
             📱 Per WhatsApp anfragen
         </a>
@@ -47,8 +109,48 @@
             E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
         </div>
         <div style="margin-top: 0.5em;">
-            &copy; 2025 BANKetTISCH
+            &copy; <span id="footer-year">2025</span> BANKetTISCH
         </div>
     </footer>
+    
+    <!-- Client-side loader for products.json with graceful fallback -->
+    <script>
+        // Set current year in footer
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+        
+        // Load and display featured products on homepage
+        fetch('products.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            })
+            .then(products => {
+                const productList = document.getElementById('product-list');
+                if (!productList) return;
+                
+                // Filter topsellers or take first 3 products
+                const featured = products.filter(p => p.topseller).slice(0, 3);
+                const toShow = featured.length > 0 ? featured : products.slice(0, 3);
+                
+                if (toShow.length > 0) {
+                    productList.innerHTML = toShow.map(product => `
+                        <div style="border: 1px solid #ddd; padding: 1rem; border-radius: 8px; text-align: center;">
+                            <img src="${product.image}" alt="${product.title}" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;">
+                            <h4 style="margin: 0.5rem 0; font-size: 0.9rem;">${product.title}</h4>
+                            <p style="color: #2a4480; font-weight: bold; margin: 0.5rem 0;">${product.price}</p>
+                        </div>
+                    `).join('');
+                } else {
+                    productList.innerHTML = '<p style="text-align: center; color: #666;">Keine Produkte verfügbar.</p>';
+                }
+            })
+            .catch(error => {
+                console.log('Could not load products:', error);
+                const productList = document.getElementById('product-list');
+                if (productList) {
+                    productList.innerHTML = '<p style="text-align: center; color: #666;">Produkte können derzeit nicht geladen werden. Besuchen Sie unsere <a href="produkte.html">Produktseite</a>.</p>';
+                }
+            });
+    </script>
 </body>
 </html>
