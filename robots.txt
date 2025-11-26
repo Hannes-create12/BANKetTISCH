@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /node_modules/
+Disallow: /test-results/
+Disallow: /playwright-report/
+
+Sitemap: https://www.bankettisch-chemnitz.de/sitemap.xml

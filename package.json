@@ -1,0 +1,22 @@
+{
+  "name": "bankettisch-chemnitz",
+  "version": "1.0.0",
+  "description": "Event- und Partyverleih Chemnitz - BANKetTISCH",
+  "private": true,
+  "scripts": {
+    "start": "http-server . -p 8080 -c-1 --silent",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed"
+  },
+  "keywords": [
+    "eventverleih",
+    "partyverleih",
+    "chemnitz"
+  ],
+  "author": "BANKetTISCH",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "http-server": "^14.1.1"
+  }
+}
