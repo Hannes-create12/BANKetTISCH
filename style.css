@@ -37,6 +37,15 @@ body{margin:0;color:#111;background:#fff;line-height:1.5}
 .site-footer{border-top:1px solid #eee;padding:1.25rem 0;color:var(--muted)}
 .site-footer a{color:var(--primary);text-decoration:none}
 
+/* Utility Classes */
+.text-center{text-align:center}
+.section-title{font-size:2rem;color:var(--primary);margin-bottom:2rem}
+.section-subtitle{font-size:1.1rem;line-height:1.7;max-width:800px;margin:0 auto}
+.feature-benefits{max-width:600px;margin:2rem auto;font-size:1.05rem;line-height:1.8}
+.footer-nav{margin-top:1rem}
+.footer-copyright{margin-top:1rem;color:var(--muted)}
+.btn-whatsapp{background:var(--accent)}
+
 @media (max-width:800px){
   .feature-list{grid-template-columns:1fr}
   .hero-content h2{font-size:1.5rem}
