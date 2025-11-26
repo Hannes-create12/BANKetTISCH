@@ -2,8 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Event- und Partyverleih Chemnitz – BANKetTISCH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Event- und Partyverleih Chemnitz: Zelte, Pavillons, Biertischgarnituren mieten in Chemnitz und Umgebung. Persönliche Beratung, Lieferung & Aufbau.">
     <meta name="keywords" content="Eventverleih Chemnitz, Partyverleih Chemnitz, Festzelt mieten Chemnitz, Pavillon mieten Chemnitz, Biertischgarnitur Chemnitz, Zelte Chemnitz, Partyzubehör Chemnitz">
     
@@ -121,7 +121,7 @@
         // Load and display featured products on homepage
         fetch('products.json')
             .then(response => {
-                if (!response.ok) throw new Error('Network response was not ok');
+                if (!response.ok) throw new Error(`Failed to load products data (HTTP ${response.status})`);
                 return response.json();
             })
             .then(products => {
