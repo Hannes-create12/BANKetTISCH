@@ -6,21 +6,26 @@
     <title>Impressum – BANKetTISCH Event- und Partyverleih Chemnitz</title>
     <meta name="description" content="Impressum und rechtliche Informationen zu BANKetTISCH Event- und Partyverleih Chemnitz.">
     <meta name="robots" content="noindex, follow">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Event- und Partyverleih Chemnitz – BANKetTISCH</h1>
-        <nav>
-            <a href="index.html">Startseite</a>
-            <a href="produkte.html">Produkte</a>
-            <a href="kontakt.html">Kontakt</a>
-            <a href="impressum.html">Impressum</a>
-        </nav>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo">BANKetTISCH</h1>
+            <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+                <a href="index.html">Start</a>
+                <a href="produkte.html">Produkte</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="tel:+4915155539947" class="cta-phone">📞 Anrufen</a>
+            </nav>
+        </div>
     </header>
     <main>
-        <h2>Impressum</h2>
+        <div class="container">
+        <h2 class="section-title">Impressum</h2>
         
         <h3>Angaben gemäß § 5 TMG</h3>
         <p>
@@ -98,20 +103,26 @@
             Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, 
             bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
         </p>
-        
+        </div>
     
     </main>
-    <footer>
-        <div>
-            <strong>Kontakt:</strong><br>
-            Ferdinandstraße 46, 09128 Chemnitz<br>
-            Tel: <a href="tel:+4915155539947">0151 55539947</a><br>
-            E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
-        </div>
-        <div style="margin-top: 0.5em;">
-            &copy; <span id="footer-year">2025</span> BANKetTISCH
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>BANKetTISCH Event- und Partyverleih</strong></p>
+            <p>
+                Ferdinandstraße 46, 09128 Chemnitz<br>
+                Tel: <a href="tel:+4915155539947">0151 55539947</a><br>
+                E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
+            </p>
+            <nav class="footer-nav">
+                <a href="impressum.html">Impressum</a> | 
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <p class="footer-copyright">&copy; <span id="footer-year">2025</span> BANKetTISCH</p>
         </div>
     </footer>
+
     <script>
         // Set current year in footer
         document.getElementById('footer-year').textContent = new Date().getFullYear();

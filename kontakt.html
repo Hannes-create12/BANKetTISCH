@@ -6,23 +6,29 @@
     <meta name="description" content="Kontakt zum Event- und Partyverleih Chemnitz: Anfrageformular, WhatsApp, E-Mail & Telefon. Persönliche Beratung & schnelle Rückmeldung.">
     <meta name="keywords" content="Eventverleih Chemnitz Kontakt, Partyverleih Chemnitz, Zelt mieten Chemnitz, Pavillon leihen Chemnitz, Biertischgarnitur Anfrage Chemnitz">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Event- und Partyverleih Chemnitz – BANKetTISCH</h1>
-        <nav>
-            <a href="index.html">Startseite</a>
-            <a href="produkte.html">Produkte</a>
-            <a href="kontakt.html">Kontakt</a>
-        </nav>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo">BANKetTISCH</h1>
+            <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+                <a href="index.html">Start</a>
+                <a href="produkte.html">Produkte</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="tel:+4915155539947" class="cta-phone">📞 Anrufen</a>
+            </nav>
+        </div>
     </header>
     <main>
+        <div class="container">
         <div class="hinweis-vermietung">
             <strong>Hinweis:</strong> Vermietung nur in Chemnitz & Umgebung!
         </div>
-        <h2>Kontakt & Anfrage</h2>
+        <h2 class="section-title">Kontakt & Anfrage</h2>
         <form action="contact.php" method="POST" id="kontakt-form">
             <label for="name">Dein Name:</label><br>
             <input type="text" id="name" name="name" required><br><br>
@@ -43,17 +49,28 @@
             <strong>Telefon:</strong> <a href="tel:+4915155539947">0151 55539947</a><br>
             <strong>E-Mail:</strong> <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
         </div>
-    </main>
-    <footer>
-        <div>
-            <strong>Kontakt:</strong><br>
-            Ferdinandstraße 46, 09128 Chemnitz<br>
-            Tel: <a href="tel:+4915155539947">0151 55539947</a><br>
-            E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
         </div>
-        <div style="margin-top: 0.5em;">
-            &copy; 2025 BANKetTISCH
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>BANKetTISCH Event- und Partyverleih</strong></p>
+            <p>
+                Ferdinandstraße 46, 09128 Chemnitz<br>
+                Tel: <a href="tel:+4915155539947">0151 55539947</a><br>
+                E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
+            </p>
+            <nav class="footer-nav">
+                <a href="impressum.html">Impressum</a> | 
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <p class="footer-copyright">&copy; <span id="footer-year">2025</span> BANKetTISCH</p>
         </div>
     </footer>
+
+    <!-- Footer Script -->
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

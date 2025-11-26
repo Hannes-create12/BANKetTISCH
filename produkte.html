@@ -6,24 +6,30 @@
     <meta name="description" content="Event- und Partyverleih in Chemnitz und Umgebung: Festzelte, Pavillons & Biertischgarnituren günstig mieten. Lieferung, Aufbau, Zubehör – jetzt unverbindlich anfragen.">
     <meta name="keywords" content="Eventverleih Chemnitz, Partyverleih Chemnitz, Festzelt mieten Chemnitz, Pavillon mieten Chemnitz, Biertischgarnitur Chemnitz, Zelte leihen Chemnitz, Eventverleih">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
-    <header>
-        <h1>Event- und Partyverleih Chemnitz – BANKetTISCH</h1>
-        <nav role="navigation" aria-label="Hauptnavigation">
-            <a href="index.html">Startseite</a>
-            <a href="produkte.html">Produkte</a>
-            <a href="kontakt.html">Kontakt</a>
-        </nav>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo">BANKetTISCH</h1>
+            <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+                <a href="index.html">Start</a>
+                <a href="produkte.html">Produkte</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="tel:+4915155539947" class="cta-phone">📞 Anrufen</a>
+            </nav>
+        </div>
     </header>
     <main id="main-content">
+        <div class="container">
         <div class="hinweis-vermietung">
             <strong>Hinweis für Chemnitz:</strong> Vermietung von Zelten, Pavillons und Biertischgarnituren <b>ausschließlich in Chemnitz und Umgebung</b>. Lieferung und Aufbau möglich!
         </div>
-        <h2>Unsere Mietartikel für Chemnitz & Umgebung</h2>
+        <h2 class="section-title">Unsere Mietartikel für Chemnitz & Umgebung</h2>
         
         <!-- Search Input -->
         <div class="search-container" style="margin-bottom:1.5rem;">
@@ -54,18 +60,29 @@
             Sie suchen <strong>Event- und Partyverleih, Festzelt oder Biertischgarnitur in Chemnitz</strong>?<br>
             BANKetTISCH ist Ihr Ansprechpartner für Chemnitz und Umgebung!
         </p>
-    </main>
-    <footer>
-        <div>
-            <strong>Kontakt:</strong><br>
-            Ferdinandstraße 46, 09128 Chemnitz<br>
-            Tel: <a href="tel:+4915155539947">0151 55539947</a><br>
-            E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
         </div>
-        <div style="margin-top: 0.5em;">
-            &copy; 2025 BANKetTISCH
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>BANKetTISCH Event- und Partyverleih</strong></p>
+            <p>
+                Ferdinandstraße 46, 09128 Chemnitz<br>
+                Tel: <a href="tel:+4915155539947">0151 55539947</a><br>
+                E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
+            </p>
+            <nav class="footer-nav">
+                <a href="impressum.html">Impressum</a> | 
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <p class="footer-copyright">&copy; <span id="footer-year">2025</span> BANKetTISCH</p>
         </div>
     </footer>
+
+    <!-- Footer Script -->
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
 
     <!-- Optional: set window.API_BASE here if you have a public API (unset = use local mock) -->
     <script>
