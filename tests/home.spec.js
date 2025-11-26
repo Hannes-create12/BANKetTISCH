@@ -12,21 +12,21 @@ test.describe('Homepage', () => {
   test('has impressum link in navigation', async ({ page }) => {
     await page.goto('/');
     
-    // Check that impressum link is present
-    const impressumLink = page.locator('nav a[href="impressum.html"]');
+    // Check that impressum link is present in the header navigation
+    const impressumLink = page.locator('header nav a[href="impressum.html"]');
     await expect(impressumLink).toBeVisible();
     await expect(impressumLink).toHaveText('Impressum');
   });
 
-  test('has product list element', async ({ page }) => {
+  test('has feature list element', async ({ page }) => {
     await page.goto('/');
     
     // Wait for the page to be fully loaded
     await page.waitForLoadState('networkidle');
     
-    // Check that #product-list is attached to the DOM
-    const productList = page.locator('#product-list');
-    await expect(productList).toBeAttached();
+    // Check that feature-list is attached to the DOM
+    const featureList = page.locator('.feature-list');
+    await expect(featureList).toBeAttached();
   });
 
   test('displays footer with current year', async ({ page }) => {

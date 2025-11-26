@@ -3,10 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaffeekanne</title>
+    <title>Kaffeekanne mieten | BANKetTISCH</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Kaffeekanne</h1>
-    <p>Willkommen auf der Seite der Kaffeekanne!</p>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo">BANKetTISCH</h1>
+            <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+                <a href="index.html">Start</a>
+                <a href="produkte.html">Produkte</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="tel:+4915155539947" class="cta-phone">📞 Anrufen</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+            <h2 class="section-title text-center">Kaffeekanne mieten</h2>
+            <div style="max-width:800px;margin:0 auto;">
+                <img src="kaffeekanne.jpeg" alt="Kaffeekanne" style="max-width:100%;height:auto;border-radius:8px;margin-bottom:1.5rem;">
+                <ul style="font-size:1.1rem;line-height:1.8;">
+                    <li>Große Kaffeekanne für Events</li>
+                    <li>Ideal für Heißgetränke</li>
+                    <li>Miete: <strong>Preis auf Anfrage</strong></li>
+                </ul>
+                <p style="font-size:1.05rem;line-height:1.7;">
+                    Perfekt für Kaffee und andere Heißgetränke bei Ihrer Veranstaltung.
+                </p>
+                <div style="margin-top:2rem;">
+                    <a class="btn-primary" href="produkte.html">&larr; Zurück zum Produktekatalog</a>
+                    <a class="btn-primary whatsapp-btn" href="https://wa.me/4915155539947?text=Hallo!%20Ich%20interessiere%20mich%20für%20die%20Kaffeekanne." style="margin-left:0.5rem;">📱 Anfragen</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>BANKetTISCH Event- und Partyverleih</strong></p>
+            <p>
+                Ferdinandstraße 46, 09128 Chemnitz<br>
+                Tel: <a href="tel:+4915155539947">0151 55539947</a><br>
+                E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
+            </p>
+            <nav class="footer-nav">
+                <a href="impressum.html">Impressum</a> | 
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <p class="footer-copyright">&copy; <span id="footer-year">2025</span> BANKetTISCH</p>
+        </div>
+    </footer>
+    
+    <!-- Footer Script -->
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

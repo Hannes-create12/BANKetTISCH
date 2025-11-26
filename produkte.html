@@ -11,59 +11,76 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
-    <header>
-        <h1>Event- und Partyverleih Chemnitz – BANKetTISCH</h1>
-        <nav role="navigation" aria-label="Hauptnavigation">
-            <a href="index.html">Startseite</a>
-            <a href="produkte.html">Produkte</a>
-            <a href="kontakt.html">Kontakt</a>
-        </nav>
+    
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo">BANKetTISCH</h1>
+            <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+                <a href="index.html">Start</a>
+                <a href="produkte.html">Produkte</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="tel:+4915155539947" class="cta-phone">📞 Anrufen</a>
+            </nav>
+        </div>
     </header>
+    
     <main id="main-content">
-        <div class="hinweis-vermietung">
-            <strong>Hinweis für Chemnitz:</strong> Vermietung von Zelten, Pavillons und Biertischgarnituren <b>ausschließlich in Chemnitz und Umgebung</b>. Lieferung und Aufbau möglich!
-        </div>
-        <h2>Unsere Mietartikel für Chemnitz & Umgebung</h2>
-        
-        <!-- Search Input -->
-        <div class="search-container" style="margin-bottom:1.5rem;">
-            <input type="text" id="product-search" placeholder="Produkte suchen..." aria-label="Produkte suchen" style="width:100%;max-width:400px;padding:0.75rem 1rem;border:1px solid #ccc;border-radius:6px;font-size:1rem;">
-        </div>
-        
-        <!-- Category Filter -->
-        <div id="category-filter" class="category-filter" role="navigation" aria-label="Produktkategorien" style="margin-bottom:1.5rem;">
-            <!-- Dynamically populated by products.js -->
-        </div>
-        
-        <!-- Products Container -->
-        <div id="products-container" class="products-container">
-            <!-- Dynamically populated by products.js -->
-            <div style="text-align: center; padding: 2em; color: #666;">
-                <p>Produkte werden geladen...</p>
+        <div class="container" style="padding-top: 2rem;">
+            <div class="hinweis-vermietung" style="background:#fff3cd;border:1px solid #ffc107;padding:1rem;border-radius:6px;margin-bottom:1.5rem;">
+                <strong>Hinweis für Chemnitz:</strong> Vermietung von Zelten, Pavillons und Biertischgarnituren <b>ausschließlich in Chemnitz und Umgebung</b>. Lieferung und Aufbau möglich!
             </div>
+            <h2 class="section-title text-center">Unsere Mietartikel für Chemnitz & Umgebung</h2>
+            
+            <!-- Search Input -->
+            <div class="search-container" style="margin-bottom:1.5rem;">
+                <input type="text" id="product-search" placeholder="Produkte suchen..." aria-label="Produkte suchen" style="width:100%;max-width:400px;padding:0.75rem 1rem;border:1px solid #ccc;border-radius:6px;font-size:1rem;">
+            </div>
+            
+            <!-- Category Filter -->
+            <div id="category-filter" class="category-filter" role="navigation" aria-label="Produktkategorien" style="margin-bottom:1.5rem;">
+                <!-- Dynamically populated by products.js -->
+            </div>
+            
+            <!-- Products Container -->
+            <div id="products-container" class="products-container">
+                <!-- Dynamically populated by products.js -->
+                <div style="text-align: center; padding: 2em; color: #666;">
+                    <p>Produkte werden geladen...</p>
+                </div>
+            </div>
+            
+            <br>
+            <div style="text-align:center;margin-top:2rem;">
+                <a class="btn-primary whatsapp-btn" href="https://wa.me/4915155539947?text=Hallo!%20Ich%20interessiere%20mich%20für%20Event-%20und%20Partyverleih%20in%20Chemnitz." target="_blank" rel="noopener noreferrer">
+                    📱 Per WhatsApp unverbindlich anfragen
+                </a>
+            </div>
+            <p style="margin-top:1rem; text-align:center;">
+                <a href="tel:+4915155539947" style="color:var(--primary);text-decoration:none;font-size:1.1rem;">📞 +49 151 55539947</a>
+            </p>
+            <p style="margin-top:2em; text-align:center; color:#888;">
+                Sie suchen <strong>Event- und Partyverleih, Festzelt oder Biertischgarnitur in Chemnitz</strong>?<br>
+                BANKetTISCH ist Ihr Ansprechpartner für Chemnitz und Umgebung!
+            </p>
         </div>
-        
-        <br>
-        <a class="button whatsapp-btn" href="https://wa.me/4915155539947?text=Hallo!%20Ich%20interessiere%20mich%20für%20Event-%20und%20Partyverleih%20in%20Chemnitz." target="_blank" rel="noopener noreferrer">
-            📱 Per WhatsApp unverbindlich anfragen
-        </a>
-        <p style="margin-top:1rem; text-align:center;">
-            <a href="tel:+4915155539947" style="color:#2a4480;text-decoration:none;font-size:1.1rem;">📞 +49 151 55539947</a>
-        </p>
-        <p style="margin-top:2em; text-align:center; color:#888;">
-            Sie suchen <strong>Event- und Partyverleih, Festzelt oder Biertischgarnitur in Chemnitz</strong>?<br>
-            BANKetTISCH ist Ihr Ansprechpartner für Chemnitz und Umgebung!
-        </p>
     </main>
-    <footer>
-        <div>
-            <strong>Kontakt:</strong><br>
-            Ferdinandstraße 46, 09128 Chemnitz<br>
-            Tel: <a href="tel:+4915155539947">0151 55539947</a><br>
-            E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
-        </div>
-        <div style="margin-top: 0.5em;">
-            &copy; 2025 BANKetTISCH
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>BANKetTISCH Event- und Partyverleih</strong></p>
+            <p>
+                Ferdinandstraße 46, 09128 Chemnitz<br>
+                Tel: <a href="tel:+4915155539947">0151 55539947</a><br>
+                E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
+            </p>
+            <nav class="footer-nav">
+                <a href="impressum.html">Impressum</a> | 
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <p class="footer-copyright">&copy; <span id="footer-year">2025</span> BANKetTISCH</p>
         </div>
     </footer>
 
@@ -75,5 +92,10 @@
 
     <!-- products.js lädt zuerst API (wenn window.API_BASE gesetzt), ansonsten die lokale products.mock.json -->
     <script src="products.js" defer></script>
+    
+    <!-- Footer Script -->
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

@@ -44,7 +44,7 @@ body{margin:0;color:#111;background:#fff;line-height:1.5}
 .feature-benefits{max-width:600px;margin:2rem auto;font-size:1.05rem;line-height:1.8}
 .footer-nav{margin-top:1rem}
 .footer-copyright{margin-top:1rem;color:var(--muted)}
-.btn-whatsapp{background:var(--accent)}
+.btn-whatsapp,.whatsapp-btn{background:var(--accent)}
 
 @media (max-width:800px){
   .feature-list{grid-template-columns:1fr}

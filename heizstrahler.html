@@ -2,40 +2,67 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heizstrahler (elektrisch) mieten | BANKetTISCH</title>
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Heizstrahler (elektrisch) mieten</h1>
-        <nav>
-            <a href="index.html">Startseite</a>
-            <a href="produkte.html">Produkte</a>
-            <a href="kontakt.html">Kontakt</a>
-        </nav>
-    </header>
-    <main>
-        <img src="heizstrahler.jpg" alt="Elektrischer Heizstrahler" style="max-width:400px;">
-        <ul>
-            <li>Elektrisch betrieben</li>
-            <li>Für Innen- und Außenbereich geeignet</li>
-            <li>Miete: <strong>15 €/Tag</strong></li>
-        </ul>
-        <p>
-            Sorgt für angenehme Wärme bei jeder Veranstaltung – einfach und sicher in der Bedienung.
-        </p>
-        <a class="button" href="produkte.html">&larr; Zurück zum Produktekatalog</a>
-    </main>
-    <footer>
-        <div>
-            <strong>Kontakt:</strong><br>
-            Ferdinandstraße 46, 09128 Chemnitz<br>
-            Tel: <a href="tel:+4915155539947">0151 55539947</a><br>
-            E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo">BANKetTISCH</h1>
+            <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+                <a href="index.html">Start</a>
+                <a href="produkte.html">Produkte</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="tel:+4915155539947" class="cta-phone">📞 Anrufen</a>
+            </nav>
         </div>
-        <div style="margin-top: 0.5em;">
-            &copy; 2025 BANKetTISCH
+    </header>
+    
+    <main>
+        <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+            <h2 class="section-title text-center">Heizstrahler (elektrisch) mieten</h2>
+            <div style="max-width:800px;margin:0 auto;">
+                <img src="heizstrahler.jpg" alt="Elektrischer Heizstrahler" style="max-width:100%;height:auto;border-radius:8px;margin-bottom:1.5rem;">
+                <ul style="font-size:1.1rem;line-height:1.8;">
+                    <li>Elektrisch betrieben</li>
+                    <li>Für Innen- und Außenbereich geeignet</li>
+                    <li>Miete: <strong>15 €/Tag</strong></li>
+                </ul>
+                <p style="font-size:1.05rem;line-height:1.7;">
+                    Sorgt für angenehme Wärme bei jeder Veranstaltung – einfach und sicher in der Bedienung.
+                </p>
+                <div style="margin-top:2rem;">
+                    <a class="btn-primary" href="produkte.html">&larr; Zurück zum Produktekatalog</a>
+                    <a class="btn-primary whatsapp-btn" href="https://wa.me/4915155539947?text=Hallo!%20Ich%20interessiere%20mich%20für%20den%20Heizstrahler." style="margin-left:0.5rem;">📱 Anfragen</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>BANKetTISCH Event- und Partyverleih</strong></p>
+            <p>
+                Ferdinandstraße 46, 09128 Chemnitz<br>
+                Tel: <a href="tel:+4915155539947">0151 55539947</a><br>
+                E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
+            </p>
+            <nav class="footer-nav">
+                <a href="impressum.html">Impressum</a> | 
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <p class="footer-copyright">&copy; <span id="footer-year">2025</span> BANKetTISCH</p>
         </div>
     </footer>
+    
+    <!-- Footer Script -->
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
