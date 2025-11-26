@@ -144,5 +144,61 @@
     "image": "eventplanung.jpeg",
     "price": "50 €/Stunde",
     "meta": "Professionelle Eventplanung für Ihre Veranstaltung"
+  },
+  {
+    "id": "hussen",
+    "title": "Hussen mieten",
+    "category": "Verkleidung",
+    "image": "ai/hussen.svg",
+    "price": "3 €/Stück",
+    "meta": "Elegante Stuhlhussen für Ihre Veranstaltung"
+  },
+  {
+    "id": "teller",
+    "title": "Teller mieten",
+    "category": "Gastrozubehör",
+    "image": "ai/teller.svg",
+    "price": "0,50 €/Stück",
+    "meta": "Hochwertige Teller für Ihr Event"
+  },
+  {
+    "id": "besteck-set",
+    "title": "Besteck-Set mieten",
+    "category": "Gastrozubehör",
+    "image": "ai/besteck-set.svg",
+    "price": "0,50 €/Stück",
+    "meta": "Messer, Gabel, Löffel – komplettes Besteck-Set"
+  },
+  {
+    "id": "chevys",
+    "title": "Chevys mieten",
+    "category": "Dekoration",
+    "image": "ai/chevys.svg",
+    "price": "2 €/Stück",
+    "meta": "Dekorative Chevys für Ihre Tischdekoration"
+  },
+  {
+    "id": "becher",
+    "title": "Becher mieten",
+    "category": "Gastrozubehör",
+    "image": "ai/becher.svg",
+    "price": "0,30 €/Stück",
+    "meta": "Robuste Becher für Getränke aller Art"
+  },
+  {
+    "id": "bierglaeser",
+    "title": "Biergläser mieten",
+    "category": "Gastrozubehör",
+    "image": "ai/bierglaeser.svg",
+    "price": "0,40 €/Stück",
+    "meta": "Klassische Biergläser für Ihr Fest"
+  },
+  {
+    "id": "massglaeser",
+    "title": "Maßgläser mieten",
+    "category": "Gastrozubehör",
+    "image": "ai/massglaeser.svg",
+    "price": "0,50 €/Stück",
+    "meta": "Traditionelle Maßgläser (1 Liter) für Bierzelt & Oktoberfest"
   }
 ]

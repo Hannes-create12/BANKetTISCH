@@ -160,5 +160,68 @@
     "image": "/BANKetTISCH/images/placeholder.jpg",
     "description": "Professionelle Eventplanung für Ihre Veranstaltung",
     "category": "Personal"
+  },
+  {
+    "id": 19,
+    "title": "Hussen",
+    "slug": "hussen",
+    "price": "3,00 €/Stück",
+    "image": "/BANKetTISCH/ai/hussen.svg",
+    "description": "Elegante Stuhlhussen für Ihre Veranstaltung",
+    "category": "Verkleidung"
+  },
+  {
+    "id": 20,
+    "title": "Teller",
+    "slug": "teller",
+    "price": "0,50 €/Stück",
+    "image": "/BANKetTISCH/ai/teller.svg",
+    "description": "Hochwertige Teller für Ihr Event",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 21,
+    "title": "Besteck-Set",
+    "slug": "besteck-set",
+    "price": "0,50 €/Stück",
+    "image": "/BANKetTISCH/ai/besteck-set.svg",
+    "description": "Messer, Gabel, Löffel – komplettes Besteck-Set",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 22,
+    "title": "Chevys",
+    "slug": "chevys",
+    "price": "2,00 €/Stück",
+    "image": "/BANKetTISCH/ai/chevys.svg",
+    "description": "Dekorative Chevys für Ihre Tischdekoration",
+    "category": "Dekoration"
+  },
+  {
+    "id": 23,
+    "title": "Becher",
+    "slug": "becher",
+    "price": "0,30 €/Stück",
+    "image": "/BANKetTISCH/ai/becher.svg",
+    "description": "Robuste Becher für Getränke aller Art",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 24,
+    "title": "Biergläser",
+    "slug": "bierglaeser",
+    "price": "0,40 €/Stück",
+    "image": "/BANKetTISCH/ai/bierglaeser.svg",
+    "description": "Klassische Biergläser für Ihr Fest",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 25,
+    "title": "Maßgläser",
+    "slug": "massglaeser",
+    "price": "0,50 €/Stück",
+    "image": "/BANKetTISCH/ai/massglaeser.svg",
+    "description": "Traditionelle Maßgläser (1 Liter) für Bierzelt & Oktoberfest",
+    "category": "Gastrozubehör"
   }
 ]

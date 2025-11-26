@@ -5,8 +5,11 @@
 (async function () {
   const CONTAINER_ID = 'products-container';
   const CATEGORY_FILTER_ID = 'category-filter';
+  const SEARCH_INPUT_ID = 'product-search';
   const MOCK_URL = '/BANKetTISCH/products.mock.json'; // Pfad, damit GitHub Pages die Datei unter /BANKetTISCH/... findet
   const API_BASE = (window.API_BASE || '').replace(/\/$/, '');
+  const WHATSAPP_NUMBER = '4915155539947';
+  const PLACEHOLDER_IMAGE = '/BANKetTISCH/ai/placeholder.svg';
   
   // Define the category order as requested
   const CATEGORY_ORDER = [
@@ -19,6 +22,11 @@
     'Gastrozubehör',
     'Event und Partyplanung'
   ];
+
+  // Global state for filtering/search
+  let allProducts = [];
+  let currentCategory = 'Alle';
+  let currentSearch = '';
 
   function el(tag, attrs = {}, html = '') {
     const e = document.createElement(tag);
@@ -52,12 +60,43 @@
     if (existing) existing.remove();
   }
 
+  function getImageSrc(p) {
+    if (!p.image) return PLACEHOLDER_IMAGE;
+    // If image path already starts with /, use as-is
+    if (p.image.startsWith('/')) return p.image;
+    // Otherwise, prefix with /BANKetTISCH/
+    return '/BANKetTISCH/' + p.image;
+  }
+
+  function filterProducts() {
+    let filtered = allProducts;
+    
+    // Apply category filter
+    if (currentCategory && currentCategory !== 'Alle') {
+      filtered = filtered.filter(p => p.category === currentCategory);
+    }
+    
+    // Apply search filter
+    if (currentSearch.trim()) {
+      const searchLower = currentSearch.toLowerCase().trim();
+      filtered = filtered.filter(p => {
+        const title = (p.title || '').toLowerCase();
+        const description = (p.description || p.meta || '').toLowerCase();
+        const category = (p.category || '').toLowerCase();
+        return title.includes(searchLower) || description.includes(searchLower) || category.includes(searchLower);
+      });
+    }
+    
+    return filtered;
+  }
+
   function renderProducts(products, filterCategory = null) {
     const container = document.getElementById(CONTAINER_ID);
     if (!container) return;
     container.innerHTML = ''; // clear loading state
+    
     if (!Array.isArray(products) || products.length === 0) {
-      container.appendChild(el('div', { class: 'alert-info', style: 'color:#666;padding:1rem;text-align:center;' }, 'Keine Produkte verfügbar.'));
+      container.appendChild(el('div', { class: 'alert-info', style: 'color:#666;padding:1rem;text-align:center;' }, 'Keine Produkte gefunden.'));
       return;
     }
 
@@ -94,8 +133,8 @@
   }
 
   function renderCategorySection(container, categoryName, products) {
-    const section = el('div', { class: 'category-section' });
-    const title = el('h3', { class: 'category-title' }, escapeHtml(categoryName));
+    const section = el('div', { class: 'category-section', style: 'margin-bottom:2rem;' });
+    const title = el('h3', { class: 'category-title', style: 'margin-bottom:1rem;color:#2a4480;border-bottom:2px solid #2a4480;padding-bottom:0.5rem;' }, escapeHtml(categoryName));
     section.appendChild(title);
 
     const grid = el('div', { class: 'product-grid', style: 'display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem;' });
@@ -121,24 +160,35 @@
   }
 
   function renderProductCard(p) {
-    const imgSrc = p.image || '/BANKetTISCH/images/placeholder.jpg';
+    const imgSrc = getImageSrc(p);
     const slug = p.slug ? encodeURIComponent(p.slug) : String(p.id);
     const card = el('article', { class: 'product-card produkt', style: 'background:#eff3fa;border-radius:14px;padding:1.5rem 1rem 1rem 1rem;box-shadow:0 2px 10px rgba(100,130,200,0.07);text-align:center;transition:transform .15s, box-shadow .15s;' });
     
-    const link = el('a', { href: `/BANKetTISCH/${slug}.html`, class: 'product-link', style: 'color:inherit;text-decoration:none;display:block;' });
+    const link = el('a', { href: '/BANKetTISCH/' + slug + '.html', class: 'product-link', style: 'color:inherit;text-decoration:none;display:block;' });
     const imgWrap = el('div', { class: 'product-image-wrap', style: 'height:140px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f7f7;border-radius:6px;margin-bottom:0.5rem;' });
-    const img = el('img', { src: imgSrc, alt: escapeHtml(p.title || ''), style: 'max-width:100%;max-height:100%;object-fit:cover;' });
+    const img = el('img', { src: imgSrc, alt: escapeHtml(p.title || ''), style: 'max-width:100%;max-height:100%;object-fit:cover;', onerror: 'this.src="' + PLACEHOLDER_IMAGE + '"' });
     imgWrap.appendChild(img);
     link.appendChild(imgWrap);
     link.appendChild(el('h3', { class: 'product-title', style: 'margin:0.5rem 0;font-size:1.15rem;font-weight:600;color:#2a4480;' }, escapeHtml(p.title || 'Produkt')));
     card.appendChild(link);
     
-    if (p.description) {
-      card.appendChild(el('p', { class: 'product-meta', style: 'margin:0.75rem 0;color:#3a4a68;font-size:0.95rem;' }, escapeHtml(p.description)));
+    if (p.description || p.meta) {
+      card.appendChild(el('p', { class: 'product-meta', style: 'margin:0.75rem 0;color:#3a4a68;font-size:0.95rem;' }, escapeHtml(p.description || p.meta)));
     }
     if (p.price) {
       card.appendChild(el('p', { class: 'product-price', style: 'margin:1rem 0;color:#2a4480;font-weight:600;font-size:1.1rem;' }, escapeHtml(p.price)));
     }
+    
+    // WhatsApp quick-action link
+    const waMessage = encodeURIComponent('Hallo! Ich interessiere mich für: ' + (p.title || 'Produkt') + ' (' + (p.price || '') + ')');
+    const waLink = el('a', {
+      href: 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + waMessage,
+      class: 'whatsapp-quick-link',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+      style: 'display:inline-block;margin-top:0.5rem;background:#25D366;color:#fff;padding:0.5rem 1rem;border-radius:6px;text-decoration:none;font-size:0.9rem;'
+    }, '📱 Anfragen');
+    card.appendChild(waLink);
     
     return card;
   }
@@ -149,20 +199,31 @@
     try {
       const res = await fetch(url, Object.assign({}, opts, { signal: controller.signal }));
       clearTimeout(timeout);
-      if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
+      if (!res.ok) throw new Error('HTTP ' + res.status + ' ' + res.statusText);
       return await res.json();
     } finally {
       clearTimeout(timeout);
     }
   }
 
+  function setupSearch(products) {
+    const searchInput = document.getElementById(SEARCH_INPUT_ID);
+    if (!searchInput) return;
+    
+    searchInput.addEventListener('input', function() {
+      currentSearch = this.value;
+      const filtered = filterProducts();
+      renderProducts(filtered, currentCategory === 'Alle' ? null : currentCategory);
+    });
+  }
+
   function setupCategoryFilter(products) {
     const catContainer = document.getElementById(CATEGORY_FILTER_ID);
     if (!catContainer) return;
     
-    const categories = Array.from(new Set((products || []).map(x => x.category).filter(Boolean)));
+    const categories = Array.from(new Set((products || []).map(function(x) { return x.category; }).filter(Boolean)));
     // Sort categories according to CATEGORY_ORDER
-    categories.sort((a, b) => {
+    categories.sort(function(a, b) {
       const indexA = CATEGORY_ORDER.indexOf(a);
       const indexB = CATEGORY_ORDER.indexOf(b);
       if (indexA === -1 && indexB === -1) return a.localeCompare(b);
@@ -174,19 +235,23 @@
     if (categories.length > 0) {
       catContainer.innerHTML = '';
       const allBtn = el('button', { type: 'button', class: 'filter-btn active', style: 'margin-right:0.5rem;margin-bottom:0.5rem;' }, 'Alle');
-      allBtn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      allBtn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(function(btn) { btn.classList.remove('active'); });
         allBtn.classList.add('active');
-        renderProducts(products, 'Alle');
+        currentCategory = 'Alle';
+        const filtered = filterProducts();
+        renderProducts(filtered, null);
       });
       catContainer.appendChild(allBtn);
       
-      categories.forEach(cat => {
+      categories.forEach(function(cat) {
         const btn = el('button', { type: 'button', class: 'filter-btn', style: 'margin-right:0.5rem;margin-bottom:0.5rem;' }, escapeHtml(cat));
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.filter-btn').forEach(function(btn) { btn.classList.remove('active'); });
           btn.classList.add('active');
-          renderProducts(products, cat);
+          currentCategory = cat;
+          const filtered = filterProducts();
+          renderProducts(filtered, cat);
         });
         catContainer.appendChild(btn);
       });
@@ -198,15 +263,14 @@
   if (container) container.innerHTML = '<div style="text-align:center;padding:2rem;color:#666;">Produkte werden geladen…</div>';
   clearError();
 
-  let products = [];
-
   // 1) try remote API if configured
   if (API_BASE) {
     try {
-      const data = await fetchJson(`${API_BASE.replace(/\/$/, '')}/products`);
-      products = Array.isArray(data) ? data : (data.products || []);
-      renderProducts(products);
-      setupCategoryFilter(products);
+      const data = await fetchJson(API_BASE.replace(/\/$/, '') + '/products');
+      allProducts = Array.isArray(data) ? data : (data.products || []);
+      renderProducts(allProducts);
+      setupCategoryFilter(allProducts);
+      setupSearch(allProducts);
       clearError();
       return;
     } catch (err) {
@@ -219,9 +283,10 @@
   // 2) try local mock
   try {
     const local = await fetchJson(MOCK_URL);
-    products = Array.isArray(local) ? local : (local.products || []);
-    renderProducts(products);
-    setupCategoryFilter(products);
+    allProducts = Array.isArray(local) ? local : (local.products || []);
+    renderProducts(allProducts);
+    setupCategoryFilter(allProducts);
+    setupSearch(allProducts);
     clearError();
     return;
   } catch (err) {
