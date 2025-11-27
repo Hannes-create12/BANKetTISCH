@@ -1,5 +1,15 @@
 User-agent: *
 Allow: /
 
+# Erlaubt alle wichtigen Seiten für Eventplanung, Ausstattung & Vermietung
+Allow: /index.html
+Allow: /produkte.html
+Allow: /kontakt.html
+Allow: /bierzapfanlage.html
+Allow: /heizstrahler.html
+Allow: /heizplatte.html
+Allow: /weinkocher.html
+Allow: /kaffeekanne.html
+
 # Sitemap - bitte DOMAIN ersetzen
 Sitemap: https://deine-domain.de/sitemap.xml

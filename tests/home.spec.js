@@ -5,8 +5,8 @@ test.describe('Homepage', () => {
   test('has correct title', async ({ page }) => {
     await page.goto('/');
     
-    // Check that the page has the expected title
-    await expect(page).toHaveTitle(/Event- und Partyverleih Chemnitz.*BANKetTISCH/);
+    // Check that the page has the expected SEO-optimized title
+    await expect(page).toHaveTitle(/Eventplanung.*Vermietung.*Chemnitz.*BANKetTISCH/);
   });
 
   test('has impressum link in navigation', async ({ page }) => {
