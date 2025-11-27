@@ -180,6 +180,7 @@ img {
   opacity: 1;
 }
 
+/* Note: !important is used to override inline styles in HTML */
 .cta-phone {
   background: var(--primary) !important;
   color: var(--color-white) !important;
@@ -314,7 +315,7 @@ footer .btn-primary:hover {
   color: var(--primary);
 }
 
-/* WhatsApp Button */
+/* WhatsApp Button - !important overrides inline styles in HTML */
 .btn-whatsapp,
 .whatsapp-btn {
   background: var(--primary) !important;
@@ -448,7 +449,7 @@ footer .btn-primary:hover {
   border-color: var(--primary);
 }
 
-/* Product Search */
+/* Product Search - !important overrides inline styles in produkte.html */
 #product-search {
   font-family: var(--font-family);
   border: 1px solid var(--border) !important;
