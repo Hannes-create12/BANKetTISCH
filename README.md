@@ -1,89 +1,43 @@
-# BANKetTISCH - Event- und Partyverleih Chemnitz
+# BANKetTISCH Project Documentation
 
-Professioneller Event- und Partyverleih in Chemnitz: Zelte, Pavillons, Biertischgarnituren, Bierzapfanlagen und mehr.
+## Project Structure
+- `src/`: Contains source code files.
+- `tests/`: Contains unit tests and other testing framework files.
+- `docs/`: Contains documentation files.
 
-## 🎉 Features
+## Features
+- Feature 1: Description of feature 1.
+- Feature 2: Description of feature 2.
+- Feature 3: Description of feature 3.
 
-- **Zelte & Pavillons** - Verschiedene Größen für jede Veranstaltung
-- **Biertischgarnituren** - Robuste Garnituren für 8-10 Personen
-- **Bierzapfanlagen** - Frisch gezapftes Bier für Ihr Event
-- **Lieferung & Aufbau** - Auf Wunsch Lieferung, Aufbau und Abbau
+## Installation
+1. Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/Hannes-create12/BANKetTISCH.git
+   ```
+3. Navigate to the project directory:
+   ```bash
+   cd BANKetTISCH
+   ```
+4. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-## 🚀 Lokale Vorschau
-
-### Option 1: Direktes Öffnen im Browser
-
-Öffnen Sie einfach `index.html` in Ihrem Webbrowser.
-
-### Option 2: Mit lokalem Entwicklungsserver
-
+## Testing
+To run the tests, use the following command:
 ```bash
-# Abhängigkeiten installieren
-npm install
-
-# Entwicklungsserver starten (http://localhost:8080)
-npm start
-```
-
-## 🧪 Tests ausführen
-
-```bash
-# Playwright-Tests ausführen
 npm test
-
-# Tests mit sichtbarem Browser
-npm run test:headed
 ```
 
-## 📁 Projektstruktur
+## Deployment
+Deployment steps for the application:
+1. Build the application:
+   ```bash
+   npm run build
+   ```
+2. Deploy to your server or preferred platform.
 
-```
-BANKetTISCH/
-├── index.html          # Startseite
-├── produkte.html       # Produktübersicht
-├── kontakt.html        # Kontaktformular
-├── impressum.html      # Impressum
-├── style.css           # Haupt-Stylesheet (Minimalistisches B&W Design)
-├── style.css.bak       # Backup des originalen Stylesheets
-├── products.js         # Produktlogik
-├── products.mock.json  # Produktdaten
-├── assets/
-│   └── images/
-│       └── logo.svg    # Logo-Platzhalter
-└── tests/
-    └── home.spec.js    # Playwright-Tests
-```
-
-## 🎨 Design
-
-Das Design folgt einer modernen, minimalistischen schwarz-weißen Designsprache:
-
-- **Farbpalette**: Schwarz (#000), Weiß (#fff), Graustufen
-- **Typografie**: Inter / System Fonts
-- **Layout**: Responsiv mit CSS Grid & Flexbox
-- **Breakpoints**: Mobile (< 640px), Tablet (< 968px), Desktop
-
-## 📱 Responsives Design
-
-Die Website ist vollständig responsiv und optimiert für:
-- Mobile Geräte (< 640px)
-- Tablets (640px - 968px)
-- Desktop (> 968px)
-
-## ♿ Barrierefreiheit
-
-- Semantisches HTML (header, nav, main, footer, section)
-- Focus-Styling für Tastaturnavigation
-- Gute Farbkontraste (WCAG AA)
-- Skip-Link für Screenreader
-- ARIA-Labels wo nötig
-
-## 📞 Kontakt
-
-- **Telefon**: 0151 55539947
-- **E-Mail**: BANKetTisch@web.de
-- **Adresse**: Ferdinandstraße 46, 09128 Chemnitz
-
----
-
-© 2025 BANKetTISCH Event- und Partyverleih
+## License
+This project is licensed under the MIT License.
