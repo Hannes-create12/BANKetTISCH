@@ -17,6 +17,10 @@ package-lock.json
 /build/
 /*.log
 
+# Test artifacts
+/test-results/
+/playwright-report/
+
 # Backup
 *.bak
 *.tmp
