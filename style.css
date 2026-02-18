@@ -1,10 +1,11 @@
-/* Verbesserte Basis-Styles — Ergänze gerne statt zu ersetzen */
+/* Base styles - Feel free to extend rather than replace */
 :root{
   --primary:#0b6b4a;
   --accent:#ffb703;
   --muted:#6b7280;
   --max-width:1100px;
   --radius:8px;
+  /* Inter font family with system font fallbacks - Inter is loaded from system fonts if available */
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
@@ -44,7 +45,8 @@ body{margin:0;color:#111;background:#fff;line-height:1.5}
 .feature-benefits{max-width:600px;margin:2rem auto;font-size:1.05rem;line-height:1.8}
 .footer-nav{margin-top:1rem}
 .footer-copyright{margin-top:1rem;color:var(--muted)}
-.btn-whatsapp,.whatsapp-btn{background:var(--accent)}
+/* WhatsApp button styling (supports both .whatsapp-btn and legacy .btn-whatsapp class names) */
+.whatsapp-btn,.btn-whatsapp{background:var(--accent)}
 
 @media (max-width:800px){
   .feature-list{grid-template-columns:1fr}
