@@ -1,80 +1,31 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kontakt – Eventplanung & Vermietung Chemnitz | BANKetTISCH</title>
-    <meta name="description" content="Kontakt für Eventplanung, Eventausstattung & Vermietung in Chemnitz: Anfrageformular, WhatsApp, E-Mail & Telefon. Persönliche Beratung für Ihre Veranstaltung. Schnelle Rückmeldung garantiert!">
-    <meta name="keywords" content="Eventplanung Chemnitz Kontakt, Eventausstattung Anfrage, Vermietung anfragen Chemnitz, Eventverleih Chemnitz, Zelt mieten Anfrage, Equipment Vermietung Chemnitz, Eventberatung">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        h2 { color: #333; }
+        form { padding: 20px; background: white; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,.1); }
+        input[type="text"], input[type="email"], textarea { width: 100%; padding: 10px; margin: 5px 0 20px 0; border: 1px solid #ccc; border-radius: 5px; }
+        input[type="submit"] { background: #5cb85c; color: white; border: none; padding: 10px 15px; cursor: pointer; }
+        input[type="submit"]:hover { background: #4cae4c; }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container header-inner">
-            <h1 class="logo">BANKetTISCH</h1>
-            <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
-                <a href="index.html">Start</a>
-                <a href="produkte.html">Produkte</a>
-                <a href="kontakt.html">Kontakt</a>
-                <a href="impressum.html">Impressum</a>
-                <a href="tel:+4915155539947" class="cta-phone">📞 Anrufen</a>
-            </nav>
-        </div>
-    </header>
-    
-    <main>
-        <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
-            <div class="hinweis-vermietung" style="background:#fff3cd;border:1px solid #ffc107;padding:1rem;border-radius:6px;margin-bottom:1.5rem;">
-                <strong>Eventplanung & Vermietung:</strong> Wir beraten Sie gerne zu Eventausstattung und Vermietung in Chemnitz & Umgebung!
-            </div>
-            <h2 class="section-title text-center">Kontakt & Anfrage – Eventplanung Chemnitz</h2>
-            <form action="contact.php" method="POST" id="kontakt-form" style="max-width:600px;margin:0 auto;">
-                <label for="name">Dein Name:</label><br>
-                <input type="text" id="name" name="name" required style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:6px;margin-bottom:1rem;"><br>
-                <label for="email">Deine E-Mail-Adresse:</label><br>
-                <input type="email" id="email" name="email" required style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:6px;margin-bottom:1rem;"><br>
-                <label for="message">Nachricht:</label><br>
-                <textarea id="message" name="message" rows="6" required style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:6px;margin-bottom:1rem;"></textarea><br>
-                <button type="submit" class="btn-primary">Absenden</button>
-            </form>
-            <div id="form-erfolg" style="color:green; display:none;text-align:center;margin-top:1rem;">Danke für deine Nachricht!</div>
-            <br>
-            <div style="text-align:center;margin-top:2rem;">
-                <a class="btn-primary whatsapp-btn" href="https://wa.me/4915155539947?text=Hallo!%20Ich%20interessiere%20mich%20für%20Event-%20und%20Partyverleih%20in%20Chemnitz." target="_blank" rel="noopener noreferrer">
-                    📱 Per WhatsApp kontaktieren
-                </a>
-            </div>
-            <br><br>
-            <div class="contact-info" style="text-align:center;">
-                <strong>Adresse:</strong> Ferdinandstraße 46, 09128 Chemnitz<br>
-                <strong>Telefon:</strong> <a href="tel:+4915155539947">0151 55539947</a><br>
-                <strong>E-Mail:</strong> <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
-            </div>
-        </div>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <p><strong>BANKetTISCH Event- und Partyverleih</strong></p>
-            <p>
-                Ferdinandstraße 46, 09128 Chemnitz<br>
-                Tel: <a href="tel:+4915155539947">0151 55539947</a><br>
-                E-Mail: <a href="mailto:BANKetTisch@web.de">BANKetTisch@web.de</a>
-            </p>
-            <nav class="footer-nav">
-                <a href="impressum.html">Impressum</a> | 
-                <a href="kontakt.html">Kontakt</a>
-            </nav>
-            <p class="footer-copyright">&copy; <span id="footer-year">2025</span> BANKetTISCH</p>
-        </div>
-    </footer>
-    
-    <!-- Footer Script -->
-    <script>
-        document.getElementById('footer-year').textContent = new Date().getFullYear();
-    </script>
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/your_form_id" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <input type="submit" value="Send">
+    </form>
+    <h3>Direct Contact Information:</h3>
+    <p>Email: contact@example.com</p>
+    <p>Phone: (123) 456-7890</p>
 </body>
 </html>
