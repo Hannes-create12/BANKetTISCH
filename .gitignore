@@ -1,26 +1,28 @@
-# OS files
+# OS
 .DS_Store
 Thumbs.db
 
-# Dependencies
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node
 node_modules/
+package-lock.json
 
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-*.log
+# Build
+/dist/
+/build/
+/*.log
 
-# Build outputs
-/dist
-/build
-/.cache
-
-# Test outputs
-/test-results/
-/playwright-report/
-/playwright/.cache/
+# Backup
+*.bak
+*.tmp
+*~
 
 # Environment
 .env
 .env.local
+.env.*
