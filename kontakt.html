@@ -1,31 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
-        h2 { color: #333; }
-        form { padding: 20px; background: white; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,.1); }
-        input[type="text"], input[type="email"], textarea { width: 100%; padding: 10px; margin: 5px 0 20px 0; border: 1px solid #ccc; border-radius: 5px; }
-        input[type="submit"] { background: #5cb85c; color: white; border: none; padding: 10px 15px; cursor: pointer; }
-        input[type="submit"]:hover { background: #4cae4c; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – BANKetTISCH Eventplanung & Vermietung Chemnitz</title>
+  <meta name="description" content="Kontaktieren Sie BANKetTISCH für Eventplanung und Vermietung in Chemnitz. Anfragen per Telefon, E-Mail oder WhatsApp – schnelle, persönliche Beratung.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bankettisch.de/kontakt.html">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/your_form_id" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        <input type="submit" value="Send">
-    </form>
-    <h3>Direct Contact Information:</h3>
-    <p>Email: contact@example.com</p>
-    <p>Phone: (123) 456-7890</p>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <p class="logo">BANKetTISCH</p>
+      <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="produkte.html">Produkte</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="tel:+4915155539947" class="cta-phone">📞 Anrufen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="contact-section">
+      <div class="container">
+        <h1 class="section-title text-center">Kontakt &amp; Anfrage</h1>
+        <p class="section-subtitle text-center" style="margin-bottom:3rem;">
+          Haben Sie Fragen oder möchten Sie ein Angebot anfragen? Wir melden uns schnell zurück!
+        </p>
+
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h2>So erreichen Sie uns</h2>
+            <p>Wir sind für Sie da – per Telefon, WhatsApp oder E-Mail. Kontaktieren Sie uns für eine kostenlose, unverbindliche Beratung.</p>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📞</div>
+              <div class="contact-detail-text">
+                <strong>Telefon</strong>
+                <a href="tel:+4915155539947">+49 151 55539947</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">✉️</div>
+              <div class="contact-detail-text">
+                <strong>E-Mail</strong>
+                <a href="mailto:BANKetTISCH@gmail.com">BANKetTISCH@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📱</div>
+              <div class="contact-detail-text">
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/4915155539947?text=Hallo!%20Ich%20interessiere%20mich%20für%20Eventplanung%20und%20Vermietung." target="_blank" rel="noopener noreferrer">Nachricht senden</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <div class="contact-detail-text">
+                <strong>Adresse</strong>
+                Ferdinandstraße 46, 09128 Chemnitz
+              </div>
+            </div>
+
+            <div style="margin-top:1.5rem;">
+              <a href="https://wa.me/4915155539947?text=Hallo!%20Ich%20interessiere%20mich%20für%20Eventplanung%20und%20Vermietung%20in%20Chemnitz." class="btn-dark whatsapp-btn" target="_blank" rel="noopener noreferrer" style="display:inline-block;">
+                📱 Direkt per WhatsApp anfragen
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper">
+            <h3>Anfrageformular</h3>
+            <form action="https://formsubmit.co/BANKetTISCH@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Neue Anfrage über die Website">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://bankettisch.de/danke.html">
+
+              <div class="form-group">
+                <label for="name">Ihr Name *</label>
+                <input type="text" id="name" name="name" placeholder="Max Mustermann" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-Mail-Adresse *</label>
+                <input type="email" id="email" name="email" placeholder="ihre@email.de" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Telefonnummer</label>
+                <input type="tel" id="phone" name="phone" placeholder="+49 151 ...">
+              </div>
+
+              <div class="form-group">
+                <label for="event">Art der Veranstaltung</label>
+                <select id="event" name="event">
+                  <option value="">Bitte wählen</option>
+                  <option value="Gartenparty">Gartenparty</option>
+                  <option value="Familienfeier">Familienfeier</option>
+                  <option value="Firmenveranstaltung">Firmenveranstaltung</option>
+                  <option value="Vereinsfest">Vereinsfest</option>
+                  <option value="Hochzeit">Hochzeit</option>
+                  <option value="Geburtstag">Geburtstag</option>
+                  <option value="Sonstiges">Sonstiges</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Ihre Nachricht / Anfrage *</label>
+                <textarea id="message" name="message" rows="5" placeholder="Beschreiben Sie kurz Ihre Veranstaltung: Datum, Anzahl Personen, gewünschte Artikel..." required></textarea>
+              </div>
+
+              <button type="submit" class="form-submit-btn">Anfrage absenden →</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="logo">BANKetTISCH</p>
+          <p>Event- und Partyverleih<br>Chemnitz &amp; Umgebung</p>
+        </div>
+        <div>
+          <p>
+            Ferdinandstraße 46, 09128 Chemnitz<br>
+            Tel: <a href="tel:+4915155539947">+49 151 55539947</a><br>
+            E-Mail: <a href="mailto:BANKetTISCH@gmail.com">BANKetTISCH@gmail.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <nav class="footer-nav">
+          <a href="impressum.html">Impressum</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <p class="footer-copyright">&copy; <span id="footer-year">2025</span> BANKetTISCH</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
