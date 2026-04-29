@@ -4,6 +4,7 @@
     "title": "Biertischgarnitur (1x)",
     "slug": "biertischgarnitur",
     "price": "10,00 €/Tag",
+    "note": "Wochenendpreis (Fr–So): 15 € für das gesamte Wochenende",
     "image": "biertischgarnitur.jpg",
     "description": "Set: 1 Tisch (220 × 50 cm) + 2 Bänke | Stabil, für 8–10 Personen",
     "category": "Mietmöbel"
@@ -135,15 +136,6 @@
     "category": "Personal"
   },
   {
-    "id": 16,
-    "title": "DJ Phil",
-    "slug": "dj-phil",
-    "price": "450,00 €/Abend",
-    "image": "images/placeholder.jpeg",
-    "description": "DJ Phil sorgt für die perfekte musikalische Untermalung Ihres Events",
-    "category": "Personal"
-  },
-  {
     "id": 17,
     "title": "Moderation",
     "slug": "moderation",
@@ -223,5 +215,141 @@
     "image": "ai/massglaeser.svg",
     "description": "Traditionelle Maßgläser (1 Liter) für Bierzelt & Oktoberfest",
     "category": "Gastrozubehör"
+  },
+  {
+    "id": 26,
+    "title": "Bierdeckelhalter",
+    "slug": "bierdeckelhalter",
+    "price": "0,50 €/Tag pro Stk",
+    "image": "ai/placeholder.svg",
+    "description": "Praktische Bierdeckelhalter für Ihre Veranstaltung",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 27,
+    "title": "Aschenbecher",
+    "slug": "aschenbecher",
+    "price": "0,50 €/Tag pro Stk",
+    "image": "ai/placeholder.svg",
+    "description": "Robuste Aschenbecher für Ihr Event",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 28,
+    "title": "Messbecher",
+    "slug": "messbecher",
+    "price": "3,00 €/Tag pro Stk",
+    "image": "ai/placeholder.svg",
+    "description": "Präzise Messbecher für Ihre Gastro-Veranstaltung",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 29,
+    "title": "GN Behälter",
+    "slug": "gn-behaelter",
+    "price": "ab 2,00 €/Tag pro Stk",
+    "image": "ai/placeholder.svg",
+    "description": "Verschiedene Größen: GN 1/1 (5 €), GN 1/2 (3 €), GN 1/3 (3 €), GN 2/3 (3 €), GN 1/4 (3 €), GN 1/6 (2 €), GN 1/9 (2 €)",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 30,
+    "title": "Servierschalen mit Stövchen",
+    "slug": "servierschalen-stoevchen",
+    "price": "5,00 €/Tag pro Stk",
+    "image": "ai/placeholder.svg",
+    "description": "Elegante Servierschalen mit Stövchen – ideal für Buffets & Catering",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 31,
+    "title": "Buffettisch",
+    "slug": "buffettisch",
+    "price": "8,00 €/Tag pro Stk",
+    "image": "ai/placeholder.svg",
+    "description": "Höhenverstellbarer Buffettisch – ideal für Catering & Buffets",
+    "category": "Mietmöbel"
+  },
+  {
+    "id": 32,
+    "title": "Verkleidungsbox",
+    "slug": "verkleidungsbox",
+    "price": "30,00 €/Tag",
+    "note": "Nur 1 Stück verfügbar – Kostüminhalt nach Wunsch zusammenstellbar",
+    "image": "ai/placeholder.svg",
+    "description": "Verkleidungsbox mit Kostümen für Ihre Party oder Ihr Event",
+    "category": "Verkleidung"
+  },
+  {
+    "id": 33,
+    "title": "Musikbox mit Mikrofonen",
+    "slug": "musikbox",
+    "price": "30,00 €/Tag",
+    "image": "ai/placeholder.svg",
+    "description": "Leistungsstarke Musikbox inkl. Mikrofone – perfekt für Partys & Events",
+    "category": "Zubehör"
+  },
+  {
+    "id": 34,
+    "title": "Aufbaubar",
+    "slug": "aufbaubar",
+    "price": "50,00 €/Tag",
+    "image": "ai/placeholder.svg",
+    "description": "Professionelle Aufbaubar für Ihr Event oder Ihre Party",
+    "category": "Mietmöbel"
+  },
+  {
+    "id": 35,
+    "title": "Pavillon 3×3 m (Weiß)",
+    "slug": "pavillon-3x3-weiss",
+    "price": "25,00 €/Tag",
+    "image": "ai/placeholder.svg",
+    "description": "Größe: 3 × 3 m | Farbe: Weiß | Aufbau & Lieferung auf Anfrage",
+    "category": "Zelte und Pavillons"
+  },
+  {
+    "id": 36,
+    "title": "Tischdecken",
+    "slug": "tischdecken",
+    "price": "1,00 €/Tag pro Stk",
+    "image": "ai/placeholder.svg",
+    "description": "Tischdecken in verschiedenen Farben für Ihr Event",
+    "category": "Dekoration"
+  },
+  {
+    "id": 37,
+    "title": "Sektgläser",
+    "slug": "sektglaeser",
+    "price": "0,40 €/Tag pro Stk",
+    "image": "ai/placeholder.svg",
+    "description": "Elegante Sektgläser für Ihre Feier",
+    "category": "Gastrozubehör"
+  },
+  {
+    "id": 38,
+    "title": "Heizpilz",
+    "slug": "heizpilz",
+    "price": "30,00 €/Tag (ohne Gas) | 45,00 €/Tag (mit Gas)",
+    "image": "ai/placeholder.svg",
+    "description": "Gasheizpilz für Outdoor-Events – wahlweise ohne oder mit Gas buchbar",
+    "category": "Zubehör"
+  },
+  {
+    "id": 39,
+    "title": "Kabeltrommel",
+    "slug": "kabeltrommel",
+    "price": "5,00 €/Tag pro Stk",
+    "image": "ai/placeholder.svg",
+    "description": "Praktische Kabeltrommel für Strom auf Ihrem Event",
+    "category": "Zubehör"
+  },
+  {
+    "id": 40,
+    "title": "Bagger",
+    "slug": "bagger",
+    "price": "100,00 €/Tag",
+    "image": "ai/placeholder.svg",
+    "description": "Bagger für Erd- und Bauarbeiten mieten",
+    "category": "Sonstiges"
   }
 ]

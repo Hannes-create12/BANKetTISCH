@@ -5,6 +5,7 @@
     "category": "Mietmöbel",
     "image": "biertischgarnitur.jpg",
     "price": "10 €/Tag",
+    "note": "Wochenendpreis (Fr–So): 15 € für das gesamte Wochenende",
     "meta": "Set: 1 Tisch (220 × 50 cm) + 2 Bänke | Stabil, für 8–10 Personen | Ideal für Partys, Garten, Feste in Chemnitz",
     "topseller": true
   },
@@ -122,14 +123,6 @@
     "meta": "Professioneller Sicherheitsdienst für Ihre Veranstaltung"
   },
   {
-    "id": "dj-phil",
-    "title": "DJ Phil",
-    "category": "Personal",
-    "image": "images/placeholder.jpg",
-    "price": "450 €/Abend",
-    "meta": "DJ Phil sorgt für die perfekte musikalische Untermalung Ihres Events"
-  },
-  {
     "id": "moderation",
     "title": "Moderation",
     "category": "Personal",
@@ -200,5 +193,126 @@
     "image": "ai/massglaeser.svg",
     "price": "0,50 €/Stück",
     "meta": "Traditionelle Maßgläser (1 Liter) für Bierzelt & Oktoberfest"
+  },
+  {
+    "id": "bierdeckelhalter",
+    "title": "Bierdeckelhalter mieten",
+    "category": "Gastrozubehör",
+    "image": "ai/placeholder.svg",
+    "price": "0,50 €/Tag pro Stk",
+    "meta": "Praktische Bierdeckelhalter für Ihre Veranstaltung"
+  },
+  {
+    "id": "aschenbecher",
+    "title": "Aschenbecher mieten",
+    "category": "Gastrozubehör",
+    "image": "ai/placeholder.svg",
+    "price": "0,50 €/Tag pro Stk",
+    "meta": "Robuste Aschenbecher für Ihr Event"
+  },
+  {
+    "id": "messbecher",
+    "title": "Messbecher mieten",
+    "category": "Gastrozubehör",
+    "image": "ai/placeholder.svg",
+    "price": "3 €/Tag pro Stk",
+    "meta": "Präzise Messbecher für Ihre Gastro-Veranstaltung"
+  },
+  {
+    "id": "gn-behaelter",
+    "title": "GN Behälter mieten",
+    "category": "Gastrozubehör",
+    "image": "ai/placeholder.svg",
+    "price": "ab 2 €/Tag pro Stk",
+    "meta": "Verschiedene Größen: GN 1/1 (5 €), GN 1/2 (3 €), GN 1/3 (3 €), GN 2/3 (3 €), GN 1/4 (3 €), GN 1/6 (2 €), GN 1/9 (2 €)"
+  },
+  {
+    "id": "servierschalen-stoevchen",
+    "title": "Servierschalen mit Stövchen mieten",
+    "category": "Gastrozubehör",
+    "image": "ai/placeholder.svg",
+    "price": "5 €/Tag pro Stk",
+    "meta": "Elegante Servierschalen mit Stövchen – ideal für Buffets & Catering"
+  },
+  {
+    "id": "buffettisch",
+    "title": "Buffettisch mieten",
+    "category": "Mietmöbel",
+    "image": "ai/placeholder.svg",
+    "price": "8 €/Tag pro Stk",
+    "meta": "Höhenverstellbarer Buffettisch – ideal für Catering & Buffets"
+  },
+  {
+    "id": "verkleidungsbox",
+    "title": "Verkleidungsbox mieten",
+    "category": "Verkleidung",
+    "image": "ai/placeholder.svg",
+    "price": "30 €/Tag",
+    "note": "Nur 1 Stück verfügbar – Kostüminhalt nach Wunsch zusammenstellbar",
+    "meta": "Verkleidungsbox mit Kostümen für Ihre Party oder Ihr Event"
+  },
+  {
+    "id": "musikbox",
+    "title": "Musikbox mit Mikrofonen mieten",
+    "category": "Zubehör",
+    "image": "ai/placeholder.svg",
+    "price": "30 €/Tag",
+    "meta": "Leistungsstarke Musikbox inkl. Mikrofone – perfekt für Partys & Events"
+  },
+  {
+    "id": "aufbaubar",
+    "title": "Aufbaubar mieten",
+    "category": "Mietmöbel",
+    "image": "ai/placeholder.svg",
+    "price": "50 €/Tag",
+    "meta": "Professionelle Aufbaubar für Ihr Event oder Ihre Party"
+  },
+  {
+    "id": "pavillon-3x3-weiss",
+    "title": "Pavillon 3×3 m (Weiß) mieten in Chemnitz",
+    "category": "Zelte und Pavillons",
+    "image": "ai/placeholder.svg",
+    "price": "25 €/Tag",
+    "meta": "Größe: 3 × 3 m | Farbe: Weiß | Aufbau & Lieferung in Chemnitz auf Anfrage"
+  },
+  {
+    "id": "tischdecken",
+    "title": "Tischdecken mieten",
+    "category": "Dekoration",
+    "image": "ai/placeholder.svg",
+    "price": "1 €/Tag pro Stk",
+    "meta": "Tischdecken in verschiedenen Farben für Ihr Event"
+  },
+  {
+    "id": "sektglaeser",
+    "title": "Sektgläser mieten",
+    "category": "Gastrozubehör",
+    "image": "ai/placeholder.svg",
+    "price": "0,40 €/Tag pro Stk",
+    "meta": "Elegante Sektgläser für Ihre Feier"
+  },
+  {
+    "id": "heizpilz",
+    "title": "Heizpilz mieten",
+    "category": "Zubehör",
+    "image": "ai/placeholder.svg",
+    "price": "30 €/Tag (ohne Gas) | 45 €/Tag (mit Gas)",
+    "meta": "Gasheizpilz für Outdoor-Events – wahlweise ohne oder mit Gas buchbar"
+  },
+  {
+    "id": "kabeltrommel",
+    "title": "Kabeltrommel mieten",
+    "category": "Zubehör",
+    "image": "ai/placeholder.svg",
+    "price": "5 €/Tag pro Stk",
+    "meta": "Praktische Kabeltrommel für Strom auf Ihrem Event"
+  },
+  {
+    "id": "bagger",
+    "title": "Bagger mieten",
+    "category": "Sonstiges",
+    "image": "ai/placeholder.svg",
+    "price": "100 €/Tag",
+    "meta": "Bagger für Erd- und Bauarbeiten mieten"
   }
 ]
