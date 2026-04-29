@@ -6,10 +6,10 @@
   const CONTAINER_ID = 'products-container';
   const CATEGORY_FILTER_ID = 'category-filter';
   const SEARCH_INPUT_ID = 'product-search';
-  const MOCK_URL = '/BANKetTISCH/products.mock.json'; // Pfad, damit GitHub Pages die Datei unter /BANKetTISCH/... findet
+  const MOCK_URL = 'products.mock.json';
   const API_BASE = (window.API_BASE || '').replace(/\/$/, '');
   const WHATSAPP_NUMBER = '4915155539947';
-  const PLACEHOLDER_IMAGE = '/BANKetTISCH/ai/placeholder.svg';
+  const PLACEHOLDER_IMAGE = 'ai/placeholder.svg';
   
   // Define the category order as requested
   const CATEGORY_ORDER = [
@@ -62,10 +62,7 @@
 
   function getImageSrc(p) {
     if (!p.image) return PLACEHOLDER_IMAGE;
-    // If image path already starts with /, use as-is
-    if (p.image.startsWith('/')) return p.image;
-    // Otherwise, prefix with /BANKetTISCH/
-    return '/BANKetTISCH/' + p.image;
+    return p.image;
   }
 
   function filterProducts() {
@@ -134,7 +131,7 @@
 
   function renderCategorySection(container, categoryName, products) {
     const section = el('div', { class: 'category-section', style: 'margin-bottom:2rem;' });
-    const title = el('h3', { class: 'category-title', style: 'margin-bottom:1rem;color:#2a4480;border-bottom:2px solid #2a4480;padding-bottom:0.5rem;' }, escapeHtml(categoryName));
+    const title = el('h3', { class: 'category-title', style: 'margin-bottom:1rem;color:var(--primary,#111);border-bottom:2px solid var(--primary,#111);padding-bottom:0.5rem;font-size:1.1rem;font-weight:700;letter-spacing:0.01em;' }, escapeHtml(categoryName));
     section.appendChild(title);
 
     const grid = el('div', { class: 'product-grid', style: 'display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem;' });
@@ -162,21 +159,21 @@
   function renderProductCard(p) {
     const imgSrc = getImageSrc(p);
     const slug = p.slug ? encodeURIComponent(p.slug) : String(p.id);
-    const card = el('article', { class: 'product-card produkt', style: 'background:#eff3fa;border-radius:14px;padding:1.5rem 1rem 1rem 1rem;box-shadow:0 2px 10px rgba(100,130,200,0.07);text-align:center;transition:transform .15s, box-shadow .15s;' });
+    const card = el('article', { class: 'product-card produkt', style: 'background:#fff;border:1px solid #e0e0e0;border-radius:4px;padding:0;overflow:hidden;transition:box-shadow .2s,transform .2s;' });
     
-    const link = el('a', { href: '/BANKetTISCH/' + slug + '.html', class: 'product-link', style: 'color:inherit;text-decoration:none;display:block;' });
-    const imgWrap = el('div', { class: 'product-image-wrap', style: 'height:140px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f7f7;border-radius:6px;margin-bottom:0.5rem;' });
-    const img = el('img', { src: imgSrc, alt: escapeHtml(p.title || ''), style: 'max-width:100%;max-height:100%;object-fit:cover;', onerror: 'this.src="' + PLACEHOLDER_IMAGE + '"' });
+    const link = el('a', { href: slug + '.html', class: 'product-link', style: 'color:inherit;text-decoration:none;display:block;' });
+    const imgWrap = el('div', { class: 'product-image-wrap', style: 'height:160px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f7f7;' });
+    const img = el('img', { src: imgSrc, alt: escapeHtml(p.title || ''), style: 'width:100%;height:100%;object-fit:cover;', onerror: 'this.src="' + PLACEHOLDER_IMAGE + '"' });
     imgWrap.appendChild(img);
     link.appendChild(imgWrap);
-    link.appendChild(el('h3', { class: 'product-title', style: 'margin:0.5rem 0;font-size:1.15rem;font-weight:600;color:#2a4480;' }, escapeHtml(p.title || 'Produkt')));
+    link.appendChild(el('h3', { class: 'product-title', style: 'margin:0.75rem 1rem 0.25rem;font-size:1rem;font-weight:700;color:#111;' }, escapeHtml(p.title || 'Produkt')));
     card.appendChild(link);
     
     if (p.description || p.meta) {
-      card.appendChild(el('p', { class: 'product-meta', style: 'margin:0.75rem 0;color:#3a4a68;font-size:0.95rem;' }, escapeHtml(p.description || p.meta)));
+      card.appendChild(el('p', { class: 'product-meta', style: 'margin:0 1rem 0.5rem;color:#666;font-size:0.875rem;' }, escapeHtml(p.description || p.meta)));
     }
     if (p.price) {
-      card.appendChild(el('p', { class: 'product-price', style: 'margin:1rem 0;color:#2a4480;font-weight:600;font-size:1.1rem;' }, escapeHtml(p.price)));
+      card.appendChild(el('p', { class: 'product-price', style: 'margin:0 1rem 1rem;color:#111;font-weight:700;font-size:1rem;' }, escapeHtml(p.price)));
     }
     
     // WhatsApp quick-action link
@@ -186,7 +183,7 @@
       class: 'whatsapp-quick-link',
       target: '_blank',
       rel: 'noopener noreferrer',
-      style: 'display:inline-block;margin-top:0.5rem;background:#25D366;color:#fff;padding:0.5rem 1rem;border-radius:6px;text-decoration:none;font-size:0.9rem;'
+      style: 'display:block;margin:0 1rem 1rem;background:#25D366;color:#fff;padding:0.5rem 1rem;border-radius:4px;text-decoration:none;font-size:0.875rem;font-weight:600;text-align:center;'
     }, '📱 Anfragen');
     card.appendChild(waLink);
     
