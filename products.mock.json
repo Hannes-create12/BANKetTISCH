@@ -4,7 +4,7 @@
     "title": "Biertischgarnitur (1x)",
     "slug": "biertischgarnitur",
     "price": "10,00 €/Tag",
-    "image": "/BANKetTISCH/biertischgarnitur.jpg",
+    "image": "biertischgarnitur.jpg",
     "description": "Set: 1 Tisch (220 × 50 cm) + 2 Bänke | Stabil, für 8–10 Personen",
     "category": "Mietmöbel"
   },
@@ -13,7 +13,7 @@
     "title": "Festzelt 3×6 m (Schwarz)",
     "slug": "zelt-3x6",
     "price": "40,00 €/Tag",
-    "image": "/BANKetTISCH/zelt-3x6.jpeg",
+    "image": "zelt-3x6.jpeg",
     "description": "Größe: 3 × 6 m | Farbe: Schwarz | Aufbau & Lieferung auf Anfrage",
     "category": "Zelte und Pavillons"
   },
@@ -22,7 +22,7 @@
     "title": "Festzelt 4×8 m (Schwarz)",
     "slug": "zelt-4x8",
     "price": "50,00 €/Tag",
-    "image": "/BANKetTISCH/zelt-4x8.jpeg",
+    "image": "zelt-4x8.jpeg",
     "description": "Größe: 4 × 8 m | Farbe: Schwarz | Aufbau & Lieferung auf Anfrage",
     "category": "Zelte und Pavillons"
   },
@@ -31,7 +31,7 @@
     "title": "Pavillon 3×3 m (Schwarz)",
     "slug": "pavillon-3x3",
     "price": "25,00 €/Tag",
-    "image": "/BANKetTISCH/pavillon-3x3.jpeg",
+    "image": "pavillon-3x3.jpeg",
     "description": "Größe: 3 × 3 m | Farbe: Schwarz | Aufbau & Lieferung auf Anfrage",
     "category": "Zelte und Pavillons"
   },
@@ -40,7 +40,7 @@
     "title": "Heizstrahler (elektrisch)",
     "slug": "heizstrahler",
     "price": "15,00 €/Tag",
-    "image": "/BANKetTISCH/heizstrahler.jpeg",
+    "image": "heizstrahler.jpeg",
     "description": "Elektrisch betrieben | Für Innen- und Außenbereich geeignet",
     "category": "Zubehör"
   },
@@ -49,7 +49,7 @@
     "title": "Heizplatte Tarrington House",
     "slug": "heizplatte",
     "price": "10,00 €/Tag",
-    "image": "/BANKetTISCH/heizplatte.jpeg",
+    "image": "heizplatte.jpeg",
     "description": "Leistung: 2000 W | Hersteller: Tarrington House",
     "category": "Gastrozubehör"
   },
@@ -58,7 +58,7 @@
     "title": "Kaffeekanne",
     "slug": "kaffeekanne",
     "price": "1,00 €/Tag",
-    "image": "/BANKetTISCH/kaffeekanne.jpeg",
+    "image": "kaffeekanne.jpeg",
     "description": "Ideal für Veranstaltungen, Feiern & Meetings",
     "category": "Gastrozubehör"
   },
@@ -67,16 +67,16 @@
     "title": "Bierzapfanlage",
     "slug": "bierzapfanlage",
     "price": "80,00 €/Tag",
-    "image": "/BANKetTISCH/bierzapfanlage.jpeg",
+    "image": "bierzapfanlage.jpeg",
     "description": "Professionelle Zapfanlage für Feste & Feiern | Reinigungskosten: 20 € (einmalig)",
     "category": "Gastrozubehör"
   },
   {
     "id": 9,
     "title": "Glühweinkocher 25 l",
-    "slug": "Glühweinkocher",
+    "slug": "weinkocher",
     "price": "5,00 €/Tag",
-    "image": "/BANKetTISCH/Glühweinkocher.jpeg",
+    "image": "Glühweinkocher.jpeg",
     "description": "Fassungsvermögen: 25 Liter | Ideal für Glühwein & Heißgetränke",
     "category": "Gastrozubehör"
   },
@@ -85,7 +85,7 @@
     "title": "Weinkühler (Ton)",
     "slug": "weinkuehler-ton",
     "price": "0,50 €/Tag",
-    "image": "/BANKetTISCH/weinkuehler-ton.jpeg",
+    "image": "weinkuehler-ton.jpeg",
     "description": "Klassischer Weinkühler aus Ton",
     "category": "Gastrozubehör"
   },
@@ -94,7 +94,7 @@
     "title": "Getränkekühler",
     "slug": "getraenkekuehler",
     "price": "0,50 €/Tag",
-    "image": "/BANKetTISCH/getraenkekuehler.jpeg",
+    "image": "getraenkekuehler.jpeg",
     "description": "Für Flaschen & Dosen",
     "category": "Gastrozubehör"
   },
@@ -103,7 +103,7 @@
     "title": "Gefriertruhe",
     "slug": "gefriertruhe",
     "price": "50,00 €/Tag",
-    "image": "/BANKetTISCH/gefriertruhe.jpeg",
+    "image": "gefriertruhe.jpeg",
     "description": "Viel Stauraum für Eis & Lebensmittel",
     "category": "Gastrozubehör"
   },
@@ -139,7 +139,7 @@
     "title": "DJ Phil",
     "slug": "dj-phil",
     "price": "450,00 €/Abend",
-    "image": "/BANKetTISCH/images/placeholder.jpeg",
+    "image": "images/placeholder.jpeg",
     "description": "DJ Phil sorgt für die perfekte musikalische Untermalung Ihres Events",
     "category": "Personal"
   },
@@ -157,7 +157,7 @@
     "title": "Eventplanung",
     "slug": "eventplanung",
     "price": "50,00 €/Stunde",
-    "image": "/BANKetTISCH/eventplanung.jpeg",
+    "image": "eventplanung.jpeg",
     "description": "Professionelle Eventplanung für Ihre Veranstaltung",
     "category": "Personal"
   },
@@ -166,7 +166,7 @@
     "title": "Hussen",
     "slug": "hussen",
     "price": "3,00 €/Stück",
-    "image": "/BANKetTISCH/ai/hussen.svg",
+    "image": "ai/hussen.svg",
     "description": "Elegante Stuhlhussen für Ihre Veranstaltung",
     "category": "Verkleidung"
   },
@@ -175,7 +175,7 @@
     "title": "Teller",
     "slug": "teller",
     "price": "0,50 €/Stück",
-    "image": "/BANKetTISCH/ai/teller.svg",
+    "image": "ai/teller.svg",
     "description": "Hochwertige Teller für Ihr Event",
     "category": "Gastrozubehör"
   },
@@ -184,7 +184,7 @@
     "title": "Besteck-Set",
     "slug": "besteck-set",
     "price": "0,50 €/Stück",
-    "image": "/BANKetTISCH/ai/besteck-set.svg",
+    "image": "ai/besteck-set.svg",
     "description": "Messer, Gabel, Löffel – komplettes Besteck-Set",
     "category": "Gastrozubehör"
   },
@@ -193,7 +193,7 @@
     "title": "Chevys",
     "slug": "chevys",
     "price": "2,00 €/Stück",
-    "image": "/BANKetTISCH/ai/chevys.svg",
+    "image": "ai/chevys.svg",
     "description": "Dekorative Chevys für Ihre Tischdekoration",
     "category": "Dekoration"
   },
@@ -202,7 +202,7 @@
     "title": "Becher",
     "slug": "becher",
     "price": "0,30 €/Stück",
-    "image": "/BANKetTISCH/ai/becher.svg",
+    "image": "ai/becher.svg",
     "description": "Robuste Becher für Getränke aller Art",
     "category": "Gastrozubehör"
   },
@@ -211,7 +211,7 @@
     "title": "Biergläser",
     "slug": "bierglaeser",
     "price": "0,40 €/Stück",
-    "image": "/BANKetTISCH/ai/bierglaeser.svg",
+    "image": "ai/bierglaeser.svg",
     "description": "Klassische Biergläser für Ihr Fest",
     "category": "Gastrozubehör"
   },
@@ -220,7 +220,7 @@
     "title": "Maßgläser",
     "slug": "massglaeser",
     "price": "0,50 €/Stück",
-    "image": "/BANKetTISCH/ai/massglaeser.svg",
+    "image": "ai/massglaeser.svg",
     "description": "Traditionelle Maßgläser (1 Liter) für Bierzelt & Oktoberfest",
     "category": "Gastrozubehör"
   }
