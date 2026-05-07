@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event-Builder Chemnitz – Veranstaltung visuell planen | BANKetTISCH</title>
+  <meta name="description" content="Planen Sie Ihre Party oder Veranstaltung visuell mit dem BANKetTISCH Event-Builder: Raum wählen, Produkte platzieren, Live-Preis sehen und direkt unverbindlich anfragen.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <p class="logo">BANKetTISCH</p>
+      <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="produkte.html">Produkte</a>
+        <a href="event-builder.html">Event-Builder</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="tel:+4915155539947" class="cta-phone">📞 Anrufen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="event-builder-page">
+    <section class="event-builder-hero">
+      <div class="container">
+        <div class="builder-hero-copy">
+          <span class="hero-badge">Neu: Event-Builder</span>
+          <h1>Planen Sie Ihr Event visuell – in wenigen Minuten zum Angebot</h1>
+          <p>Wählen Sie Eventart und Fläche, platzieren Sie Mietmaterialien per Drag-and-Drop und sehen Sie den Preis live.</p>
+          <div class="builder-trust">
+            <span>⭐ 4.9/5 Kundenzufriedenheit</span>
+            <span>🚚 Lieferung in Chemnitz & Umgebung</span>
+            <span>⚡ Antwort meist innerhalb von 60 Minuten</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="event-builder-shell" aria-label="Event-Builder">
+      <div class="container">
+        <ol class="builder-stepper" id="builder-stepper" aria-label="Planungsschritte">
+          <li data-step="1">1. Eventart</li>
+          <li data-step="2">2. Fläche</li>
+          <li data-step="3">3. Gäste</li>
+          <li data-step="4">4. Platzierung</li>
+          <li data-step="5">5. Anfrage</li>
+        </ol>
+
+        <div class="builder-layout" id="builder-layout">
+          <!-- Mobile tab bar (visible < 1150px) -->
+          <nav class="builder-tab-bar" id="builder-tab-bar" aria-label="Builder-Bereiche">
+            <button type="button" class="builder-tab" data-panel="left">⚙️ Einstellungen</button>
+            <button type="button" class="builder-tab active" data-panel="canvas">🗺️ Planung</button>
+            <button type="button" class="builder-tab" data-panel="right">💶 Preis</button>
+          </nav>
+
+          <aside class="builder-panel builder-panel-left" id="builder-panel-left" aria-label="Einstellungen und Produkte">
+            <section class="builder-card">
+              <h2>Eventprofil</h2>
+              <label for="event-type">Eventart</label>
+              <select id="event-type">
+                <option value="">Bitte auswählen</option>
+                <option value="geburtstag">Geburtstag</option>
+                <option value="hochzeit">Hochzeit</option>
+                <option value="firmenfeier">Firmenfeier</option>
+                <option value="gartenparty">Gartenparty</option>
+                <option value="kindergeburtstag">Kindergeburtstag</option>
+                <option value="vereinsfest">Vereinsfest</option>
+                <option value="schulveranstaltung">Schulveranstaltung</option>
+              </select>
+
+              <label for="venue-type">Raum/Fläche</label>
+              <select id="venue-type">
+                <option value="garten">Garten</option>
+                <option value="halle">Halle</option>
+                <option value="wohnzimmer">Wohnzimmer</option>
+                <option value="outdoor">Outdoor</option>
+                <option value="hochzeitssaal">Hochzeitssaal</option>
+              </select>
+
+              <label for="room-size">Flächengröße</label>
+              <select id="room-size">
+                <option value="s">S – 6 × 4 m</option>
+                <option value="m" selected>M – 10 × 6 m</option>
+                <option value="l">L – 14 × 8 m</option>
+              </select>
+
+              <label for="guest-count">Gästezahl</label>
+              <input id="guest-count" type="number" min="1" step="1" placeholder="z. B. 40">
+            </section>
+
+            <section class="builder-card">
+              <h2>Produktbibliothek</h2>
+              <div class="builder-library-controls">
+                <input type="search" id="library-search" placeholder="Produkt suchen..." aria-label="Produkt suchen">
+                <select id="library-category" aria-label="Kategorie filtern">
+                  <option value="alle">Alle Kategorien</option>
+                </select>
+              </div>
+              <div id="library-list" class="library-list" aria-live="polite"></div>
+            </section>
+          </aside>
+
+          <section class="builder-canvas-panel" id="builder-panel-canvas" aria-label="Planungsfläche">
+            <div class="builder-canvas-toolbar builder-card">
+              <div class="toolbar-group">
+                <button id="toggle-grid" type="button" class="btn-dark">Raster: Ein</button>
+                <label for="zoom-range">Zoom</label>
+                <input id="zoom-range" type="range" min="70" max="180" value="100">
+                <button id="reset-view" type="button" class="btn-dark">Ansicht zurücksetzen</button>
+              </div>
+              <div class="toolbar-group">
+                <button id="pan-mode" type="button" class="btn-dark">Pan-Modus: Aus</button>
+                <button id="clear-plan" type="button" class="btn-dark">Alles löschen</button>
+              </div>
+            </div>
+
+            <div id="planner-viewport" class="planner-viewport" tabindex="0" aria-label="Planungsfläche mit Drag-and-Drop">
+              <div id="planner-zoom-layer" class="planner-zoom-layer">
+                <div id="planner-stage" class="planner-stage grid-on"></div>
+              </div>
+            </div>
+
+            <div class="builder-card selected-item-card" id="selected-item-card">
+              <h3>Ausgewähltes Element</h3>
+              <p id="selected-item-name">Kein Element ausgewählt.</p>
+              <div class="selected-actions" id="selected-actions" hidden>
+                <label for="selected-quantity">Anzahl</label>
+                <input id="selected-quantity" type="number" min="1" step="1">
+                <label for="selected-scale">Skalierung</label>
+                <input id="selected-scale" type="range" min="60" max="160" value="100">
+                <div class="selected-button-row">
+                  <button id="rotate-left" type="button" class="btn-dark">↺ Drehen</button>
+                  <button id="rotate-right" type="button" class="btn-dark">↻ Drehen</button>
+                  <button id="duplicate-item" type="button" class="btn-dark">Duplizieren</button>
+                  <button id="remove-item" type="button" class="btn-dark">Löschen</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <aside class="builder-panel builder-panel-right" id="builder-panel-right" aria-label="Preis und Empfehlungen">
+            <section class="builder-card">
+              <h2>Live-Preis</h2>
+              <label for="delivery-zone">Lieferzone</label>
+              <select id="delivery-zone">
+                <option value="innenstadt">Chemnitz Innenstadt (25 €)</option>
+                <option value="umland" selected>Chemnitz Umland (35 €)</option>
+                <option value="weit">Erweitertes Gebiet (50 €)</option>
+              </select>
+
+              <label class="switch-line">
+                <input type="checkbox" id="include-setup">
+                Aufbauhilfe buchen (+45 €)
+              </label>
+
+              <div class="price-breakdown" id="price-breakdown"></div>
+            </section>
+
+            <section class="builder-card">
+              <h2>Empfehlungen</h2>
+              <ul id="recommendations" class="recommendations-list"></ul>
+            </section>
+
+            <section class="builder-card">
+              <h2>Planungs-Zusammenfassung</h2>
+              <p id="plan-summary">Starten Sie die Planung, um Ihre Zusammenfassung zu sehen.</p>
+              <a id="inquiry-link" class="btn-dark" href="kontakt.html">Unverbindliches Angebot</a>
+              <a id="whatsapp-inquiry" class="btn-dark whatsapp-btn" href="https://wa.me/4915155539947" target="_blank" rel="noopener noreferrer">📱 Anfrage per WhatsApp</a>
+            </section>
+          </aside>
+        </div>
+
+        <div class="mobile-builder-actions">
+          <a id="mobile-inquiry-link" href="kontakt.html" class="btn-dark">Jetzt Anfrage senden</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="logo">BANKetTISCH</p>
+          <p>Event- und Partyverleih<br>Chemnitz &amp; Umgebung</p>
+        </div>
+        <div>
+          <p>
+            Ferdinandstraße 46, 09128 Chemnitz<br>
+            Tel: <a href="tel:+4915155539947">+49 151 55539947</a><br>
+            E-Mail: <a href="mailto:BANKetTISCH@gmail.com">BANKetTISCH@gmail.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <nav class="footer-nav">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <p class="footer-copyright">&copy; <span id="footer-year">2025</span> BANKetTISCH</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+  <script src="event-builder.js" defer></script>
+</body>
+</html>

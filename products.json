@@ -7,7 +7,38 @@
     "price": "10 €/Tag",
     "note": "Wochenendpreis (Fr–So): 15 € für das gesamte Wochenende",
     "meta": "Set: 1 Tisch (220 × 50 cm) + 2 Bänke | Stabil, für 8–10 Personen | Ideal für Partys, Garten, Feste in Chemnitz",
-    "topseller": true
+    "topseller": true,
+    "shortDescription": "Klassisches Set für 8–10 Personen mit hoher Stabilität.",
+    "priceType": "day",
+    "basePrice": 10,
+    "dimensions": {
+      "width": 2.2,
+      "depth": 0.5,
+      "unit": "m"
+    },
+    "footprint": {
+      "width": 2.2,
+      "depth": 1.8
+    },
+    "seatsCapacity": 8,
+    "tags": [
+      "sitzplaetze",
+      "outdoor",
+      "klassiker"
+    ],
+    "upsellRelations": [
+      "pavillon-3x3",
+      "zelt-3x6",
+      "heizstrahler"
+    ],
+    "themeFit": [
+      "geburtstag",
+      "gartenparty",
+      "vereinsfest",
+      "firmenfeier"
+    ],
+    "scalable": false,
+    "rotatable": true
   },
   {
     "id": "zelt-3x6",
@@ -15,7 +46,37 @@
     "category": "Zelte und Pavillons",
     "image": "zelt-3x6.jpeg",
     "price": "40 €/Tag",
-    "meta": "Größe: 3 × 6 m | Farbe: Schwarz | Aufbau & Lieferung in Chemnitz auf Anfrage"
+    "meta": "Größe: 3 × 6 m | Farbe: Schwarz | Aufbau & Lieferung in Chemnitz auf Anfrage",
+    "shortDescription": "Wetterfeste Zeltfläche für mittelgroße Veranstaltungen.",
+    "priceType": "day",
+    "basePrice": 40,
+    "dimensions": {
+      "width": 6,
+      "depth": 3,
+      "unit": "m"
+    },
+    "footprint": {
+      "width": 6,
+      "depth": 3
+    },
+    "seatsCapacity": 30,
+    "tags": [
+      "wetterfest",
+      "outdoor",
+      "überdachung"
+    ],
+    "upsellRelations": [
+      "heizstrahler",
+      "kabeltrommel",
+      "biertischgarnitur"
+    ],
+    "themeFit": [
+      "gartenparty",
+      "vereinsfest",
+      "firmenfeier"
+    ],
+    "scalable": false,
+    "rotatable": true
   },
   {
     "id": "zelt-4x8",
@@ -23,7 +84,37 @@
     "category": "Zelte und Pavillons",
     "image": "zelt-4x8.jpeg",
     "price": "50 €/Tag",
-    "meta": "Größe: 4 × 8 m | Farbe: Schwarz | Aufbau & Lieferung in Chemnitz auf Anfrage"
+    "meta": "Größe: 4 × 8 m | Farbe: Schwarz | Aufbau & Lieferung in Chemnitz auf Anfrage",
+    "shortDescription": "Großes Festzelt für Events mit vielen Gästen.",
+    "priceType": "day",
+    "basePrice": 50,
+    "dimensions": {
+      "width": 8,
+      "depth": 4,
+      "unit": "m"
+    },
+    "footprint": {
+      "width": 8,
+      "depth": 4
+    },
+    "seatsCapacity": 60,
+    "tags": [
+      "grossveranstaltung",
+      "outdoor",
+      "überdachung"
+    ],
+    "upsellRelations": [
+      "heizstrahler",
+      "biertischgarnitur",
+      "servicekraefte"
+    ],
+    "themeFit": [
+      "hochzeit",
+      "firmenfeier",
+      "vereinsfest"
+    ],
+    "scalable": false,
+    "rotatable": true
   },
   {
     "id": "pavillon-3x3",
@@ -31,7 +122,37 @@
     "category": "Zelte und Pavillons",
     "image": "pavillon-3x3.jpeg",
     "price": "25 €/Tag",
-    "meta": "Größe: 3 × 3 m | Farbe: Schwarz | Aufbau & Lieferung in Chemnitz auf Anfrage"
+    "meta": "Größe: 3 × 3 m | Farbe: Schwarz | Aufbau & Lieferung in Chemnitz auf Anfrage",
+    "shortDescription": "Kompakter Pavillon für Empfang, Buffet oder Lounge.",
+    "priceType": "day",
+    "basePrice": 25,
+    "dimensions": {
+      "width": 3,
+      "depth": 3,
+      "unit": "m"
+    },
+    "footprint": {
+      "width": 3,
+      "depth": 3
+    },
+    "seatsCapacity": 14,
+    "tags": [
+      "pavillon",
+      "outdoor",
+      "überdachung"
+    ],
+    "upsellRelations": [
+      "heizstrahler",
+      "biertischgarnitur",
+      "buffettisch"
+    ],
+    "themeFit": [
+      "geburtstag",
+      "hochzeit",
+      "gartenparty"
+    ],
+    "scalable": false,
+    "rotatable": true
   },
   {
     "id": "heizplatte",
@@ -39,7 +160,18 @@
     "category": "Gastrozubehör",
     "image": "heizplatte.jpeg",
     "price": "10 €/Tag",
-    "meta": "Leistung: 2000 W | Hersteller: Tarrington House"
+    "meta": "Leistung: 2000 W | Hersteller: Tarrington House",
+    "shortDescription": "Elektrische Heizplatte zum Warmhalten von Speisen.",
+    "priceType": "day",
+    "basePrice": 10,
+    "dimensions": { "width": 0.45, "depth": 0.35, "unit": "m" },
+    "footprint": { "width": 0.5, "depth": 0.4 },
+    "seatsCapacity": 0,
+    "tags": ["catering", "warmhalten", "gastro"],
+    "upsellRelations": ["servierschalen-stoevchen", "gn-behaelter", "buffettisch"],
+    "themeFit": ["hochzeit", "firmenfeier", "schulveranstaltung"],
+    "scalable": false,
+    "rotatable": false
   },
   {
     "id": "kaffeekanne",
@@ -47,7 +179,18 @@
     "category": "Gastrozubehör",
     "image": "kaffeekanne.jpeg",
     "price": "1 €/Tag",
-    "meta": "Ideal für Veranstaltungen, Feiern & Meetings"
+    "meta": "Ideal für Veranstaltungen, Feiern & Meetings",
+    "shortDescription": "Thermoskanne für Kaffee und Heißgetränke.",
+    "priceType": "day",
+    "basePrice": 1,
+    "dimensions": { "width": 0.15, "depth": 0.15, "unit": "m" },
+    "footprint": { "width": 0.2, "depth": 0.2 },
+    "seatsCapacity": 0,
+    "tags": ["catering", "kaffee", "getränke"],
+    "upsellRelations": ["heizplatte", "becher", "servierschalen-stoevchen"],
+    "themeFit": ["firmenfeier", "schulveranstaltung", "hochzeit"],
+    "scalable": false,
+    "rotatable": false
   },
   {
     "id": "heizstrahler",
@@ -55,7 +198,37 @@
     "category": "Zubehör",
     "image": "heizstrahler.jpeg",
     "price": "15 €/Tag",
-    "meta": "Elektrisch betrieben | Für Innen- und Außenbereich geeignet"
+    "meta": "Elektrisch betrieben | Für Innen- und Außenbereich geeignet",
+    "shortDescription": "Elektrische Wärmequelle für kühle Abendstunden.",
+    "priceType": "day",
+    "basePrice": 15,
+    "dimensions": {
+      "width": 0.5,
+      "depth": 0.5,
+      "unit": "m"
+    },
+    "footprint": {
+      "width": 0.8,
+      "depth": 0.8
+    },
+    "seatsCapacity": 0,
+    "tags": [
+      "wärme",
+      "outdoor",
+      "komfort"
+    ],
+    "upsellRelations": [
+      "zelt-3x6",
+      "zelt-4x8",
+      "pavillon-3x3"
+    ],
+    "themeFit": [
+      "gartenparty",
+      "vereinsfest",
+      "hochzeit"
+    ],
+    "scalable": false,
+    "rotatable": true
   },
   {
     "id": "bierzapfanlage",
@@ -64,7 +237,37 @@
     "image": "bierzapfanlage.jpeg",
     "price": "80 €/Tag",
     "note": "Reinigungskosten: 20 € (einmalig)",
-    "meta": "Professionelle Zapfanlage für Feste & Feiern"
+    "meta": "Professionelle Zapfanlage für Feste & Feiern",
+    "shortDescription": "Professionelle Zapfanlage für Bierausgabe am Eventtag.",
+    "priceType": "day",
+    "basePrice": 80,
+    "dimensions": {
+      "width": 0.8,
+      "depth": 0.6,
+      "unit": "m"
+    },
+    "footprint": {
+      "width": 1,
+      "depth": 0.8
+    },
+    "seatsCapacity": 0,
+    "tags": [
+      "getränke",
+      "bar",
+      "premium"
+    ],
+    "upsellRelations": [
+      "bierglaeser",
+      "massglaeser",
+      "getraenkekuehler"
+    ],
+    "themeFit": [
+      "firmenfeier",
+      "vereinsfest",
+      "gartenparty"
+    ],
+    "scalable": false,
+    "rotatable": true
   },
   {
     "id": "weinkocher",
@@ -96,7 +299,18 @@
     "category": "Gastrozubehör",
     "image": "gefriertruhe.jpeg",
     "price": "50 €/Tag",
-    "meta": "Viel Stauraum für Eis & Lebensmittel"
+    "meta": "Viel Stauraum für Eis & Lebensmittel",
+    "shortDescription": "Große Gefriertruhe für Eis, Getränke und Lebensmittel.",
+    "priceType": "day",
+    "basePrice": 50,
+    "dimensions": { "width": 1.0, "depth": 0.6, "unit": "m" },
+    "footprint": { "width": 1.0, "depth": 0.65 },
+    "seatsCapacity": 0,
+    "tags": ["kühlung", "catering", "getränke"],
+    "upsellRelations": ["getraenkekuehler", "bierzapfanlage"],
+    "themeFit": ["gartenparty", "vereinsfest", "firmenfeier"],
+    "scalable": false,
+    "rotatable": true
   },
   {
     "id": "servicekraefte",
@@ -144,7 +358,36 @@
     "category": "Verkleidung",
     "image": "ai/hussen.svg",
     "price": "3 €/Stück",
-    "meta": "Elegante Stuhlhussen für Ihre Veranstaltung"
+    "meta": "Elegante Stuhlhussen für Ihre Veranstaltung",
+    "shortDescription": "Elegante Hussen für hochwertiges Ambiente.",
+    "priceType": "piece",
+    "basePrice": 3,
+    "dimensions": {
+      "width": 0.5,
+      "depth": 0.5,
+      "unit": "m"
+    },
+    "footprint": {
+      "width": 0.5,
+      "depth": 0.5
+    },
+    "seatsCapacity": 0,
+    "tags": [
+      "deko",
+      "hochzeit",
+      "stil"
+    ],
+    "upsellRelations": [
+      "chevys",
+      "tischdecken"
+    ],
+    "themeFit": [
+      "hochzeit",
+      "firmenfeier",
+      "schulveranstaltung"
+    ],
+    "scalable": true,
+    "rotatable": false
   },
   {
     "id": "teller",
@@ -168,7 +411,36 @@
     "category": "Dekoration",
     "image": "ai/chevys.svg",
     "price": "2 €/Stück",
-    "meta": "Dekorative Chevys für Ihre Tischdekoration"
+    "meta": "Dekorative Chevys für Ihre Tischdekoration",
+    "shortDescription": "Dekorative Akzente für hochwertige Tischgestaltung.",
+    "priceType": "piece",
+    "basePrice": 2,
+    "dimensions": {
+      "width": 0.4,
+      "depth": 0.4,
+      "unit": "m"
+    },
+    "footprint": {
+      "width": 0.4,
+      "depth": 0.4
+    },
+    "seatsCapacity": 0,
+    "tags": [
+      "deko",
+      "hochzeit",
+      "tisch"
+    ],
+    "upsellRelations": [
+      "hussen",
+      "tischdecken"
+    ],
+    "themeFit": [
+      "hochzeit",
+      "geburtstag",
+      "firmenfeier"
+    ],
+    "scalable": true,
+    "rotatable": false
   },
   {
     "id": "becher",
@@ -240,7 +512,36 @@
     "category": "Mietmöbel",
     "image": "ai/placeholder.svg",
     "price": "8 €/Tag pro Stk",
-    "meta": "Höhenverstellbarer Buffettisch – ideal für Catering & Buffets"
+    "meta": "Höhenverstellbarer Buffettisch – ideal für Catering & Buffets",
+    "shortDescription": "Höhenverstellbarer Tisch für Buffetstationen.",
+    "priceType": "day",
+    "basePrice": 8,
+    "dimensions": {
+      "width": 1.8,
+      "depth": 0.75,
+      "unit": "m"
+    },
+    "footprint": {
+      "width": 1.8,
+      "depth": 0.75
+    },
+    "seatsCapacity": 0,
+    "tags": [
+      "buffet",
+      "service",
+      "catering"
+    ],
+    "upsellRelations": [
+      "servierschalen-stoevchen",
+      "gn-behaelter"
+    ],
+    "themeFit": [
+      "hochzeit",
+      "firmenfeier",
+      "schulveranstaltung"
+    ],
+    "scalable": false,
+    "rotatable": true
   },
   {
     "id": "verkleidungsbox",
@@ -257,7 +558,18 @@
     "category": "Zubehör",
     "image": "ai/placeholder.svg",
     "price": "30 €/Tag",
-    "meta": "Leistungsstarke Musikbox inkl. Mikrofone – perfekt für Partys & Events"
+    "meta": "Leistungsstarke Musikbox inkl. Mikrofone – perfekt für Partys & Events",
+    "shortDescription": "Leistungsstarke Musikbox inkl. Mikrofone für Ihr Event.",
+    "priceType": "day",
+    "basePrice": 30,
+    "dimensions": { "width": 0.4, "depth": 0.4, "unit": "m" },
+    "footprint": { "width": 0.45, "depth": 0.45 },
+    "seatsCapacity": 0,
+    "tags": ["musik", "unterhaltung", "mikrofon"],
+    "upsellRelations": ["kabeltrommel", "aufbaubar"],
+    "themeFit": ["geburtstag", "gartenparty", "vereinsfest", "firmenfeier"],
+    "scalable": false,
+    "rotatable": true
   },
   {
     "id": "aufbaubar",
@@ -265,7 +577,18 @@
     "category": "Mietmöbel",
     "image": "ai/placeholder.svg",
     "price": "50 €/Tag",
-    "meta": "Professionelle Aufbaubar für Ihr Event oder Ihre Party"
+    "meta": "Professionelle Aufbaubar für Ihr Event oder Ihre Party",
+    "shortDescription": "Professionelle Aufbaubar als zentraler Ausschankpunkt.",
+    "priceType": "day",
+    "basePrice": 50,
+    "dimensions": { "width": 2.0, "depth": 0.6, "unit": "m" },
+    "footprint": { "width": 2.0, "depth": 0.65 },
+    "seatsCapacity": 0,
+    "tags": ["bar", "ausschank", "premium"],
+    "upsellRelations": ["bierzapfanlage", "getraenkekuehler", "barkeeper"],
+    "themeFit": ["hochzeit", "firmenfeier", "gartenparty", "vereinsfest"],
+    "scalable": false,
+    "rotatable": true
   },
   {
     "id": "pavillon-3x3-weiss",
@@ -273,7 +596,18 @@
     "category": "Zelte und Pavillons",
     "image": "ai/placeholder.svg",
     "price": "25 €/Tag",
-    "meta": "Größe: 3 × 3 m | Farbe: Weiß | Aufbau & Lieferung in Chemnitz auf Anfrage"
+    "meta": "Größe: 3 × 3 m | Farbe: Weiß | Aufbau & Lieferung in Chemnitz auf Anfrage",
+    "shortDescription": "Eleganter weißer Pavillon für Empfang, Buffet oder Lounge.",
+    "priceType": "day",
+    "basePrice": 25,
+    "dimensions": { "width": 3, "depth": 3, "unit": "m" },
+    "footprint": { "width": 3, "depth": 3 },
+    "seatsCapacity": 14,
+    "tags": ["pavillon", "outdoor", "überdachung", "weiß"],
+    "upsellRelations": ["heizstrahler", "biertischgarnitur", "buffettisch"],
+    "themeFit": ["hochzeit", "geburtstag", "gartenparty"],
+    "scalable": false,
+    "rotatable": true
   },
   {
     "id": "tischdecken",
@@ -281,7 +615,36 @@
     "category": "Dekoration",
     "image": "ai/placeholder.svg",
     "price": "1 €/Tag pro Stk",
-    "meta": "Tischdecken in verschiedenen Farben für Ihr Event"
+    "meta": "Tischdecken in verschiedenen Farben für Ihr Event",
+    "shortDescription": "Pflegeleichte Tischdecken in verschiedenen Farben.",
+    "priceType": "piece",
+    "basePrice": 1,
+    "dimensions": {
+      "width": 1.3,
+      "depth": 1.3,
+      "unit": "m"
+    },
+    "footprint": {
+      "width": 1.3,
+      "depth": 1.3
+    },
+    "seatsCapacity": 0,
+    "tags": [
+      "deko",
+      "hygiene",
+      "farbe"
+    ],
+    "upsellRelations": [
+      "hussen",
+      "chevys"
+    ],
+    "themeFit": [
+      "hochzeit",
+      "geburtstag",
+      "vereinsfest"
+    ],
+    "scalable": true,
+    "rotatable": false
   },
   {
     "id": "sektglaeser",
@@ -297,7 +660,18 @@
     "category": "Zubehör",
     "image": "ai/placeholder.svg",
     "price": "30 €/Tag (ohne Gas) | 45 €/Tag (mit Gas)",
-    "meta": "Gasheizpilz für Outdoor-Events – wahlweise ohne oder mit Gas buchbar"
+    "meta": "Gasheizpilz für Outdoor-Events – wahlweise ohne oder mit Gas buchbar",
+    "shortDescription": "Gasheizpilz für angenehme Wärme bei Outdoor-Events.",
+    "priceType": "day",
+    "basePrice": 30,
+    "dimensions": { "width": 0.6, "depth": 0.6, "unit": "m" },
+    "footprint": { "width": 0.8, "depth": 0.8 },
+    "seatsCapacity": 0,
+    "tags": ["wärme", "outdoor", "komfort"],
+    "upsellRelations": ["zelt-3x6", "zelt-4x8", "pavillon-3x3"],
+    "themeFit": ["gartenparty", "vereinsfest", "hochzeit"],
+    "scalable": false,
+    "rotatable": true
   },
   {
     "id": "kabeltrommel",
@@ -305,7 +679,18 @@
     "category": "Zubehör",
     "image": "ai/placeholder.svg",
     "price": "5 €/Tag pro Stk",
-    "meta": "Praktische Kabeltrommel für Strom auf Ihrem Event"
+    "meta": "Praktische Kabeltrommel für Strom auf Ihrem Event",
+    "shortDescription": "Kabeltrommel für sichere Stromversorgung auf dem Eventgelände.",
+    "priceType": "day",
+    "basePrice": 5,
+    "dimensions": { "width": 0.4, "depth": 0.4, "unit": "m" },
+    "footprint": { "width": 0.4, "depth": 0.4 },
+    "seatsCapacity": 0,
+    "tags": ["strom", "kabel", "infrastruktur"],
+    "upsellRelations": ["heizstrahler", "musikbox"],
+    "themeFit": ["gartenparty", "vereinsfest", "firmenfeier"],
+    "scalable": false,
+    "rotatable": false
   },
   {
     "id": "bagger",

@@ -176,6 +176,14 @@
       card.appendChild(el('p', { class: 'product-price', style: 'margin:0 1rem 1rem;color:#111;font-weight:700;font-size:1rem;' }, escapeHtml(p.price)));
     }
     
+    // Event-Builder quick-action link
+    const builderLink = el('a', {
+      href: 'event-builder.html?add=' + slug,
+      class: 'builder-quick-link',
+      style: 'display:block;margin:0 1rem 0.5rem;background:#111;color:#fff;padding:0.5rem 1rem;border-radius:4px;text-decoration:none;font-size:0.875rem;font-weight:600;text-align:center;'
+    }, '🧩 Im Event-Builder testen');
+    card.appendChild(builderLink);
+
     // WhatsApp quick-action link
     const waMessage = encodeURIComponent('Hallo! Ich interessiere mich für: ' + (p.title || 'Produkt') + ' (' + (p.price || '') + ')');
     const waLink = el('a', {
