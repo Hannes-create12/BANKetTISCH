@@ -209,6 +209,20 @@
     </div>
   </footer>
 
+  <!-- 30-second planning-help popup -->
+  <div id="planning-help-overlay" class="planning-help-overlay" role="dialog" aria-modal="true" aria-labelledby="planning-help-title" hidden>
+    <div class="planning-help-dialog">
+      <button type="button" class="planning-help-close" id="planning-help-close" aria-label="Schließen">✕</button>
+      <div class="planning-help-icon">🎉</div>
+      <h2 id="planning-help-title">Planung zu aufwändig?</h2>
+      <p>Kein Problem! Wir übernehmen die komplette Eventplanung für Sie – einfach anfragen und wir kümmern uns um alles.</p>
+      <div class="planning-help-actions">
+        <a id="planning-help-link" href="kontakt.html" class="btn-dark">Jetzt Eventplanung anfragen</a>
+        <button type="button" class="planning-help-later" id="planning-help-later">Ich plane selbst weiter</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     document.getElementById('footer-year').textContent = new Date().getFullYear();
   </script>

@@ -439,15 +439,27 @@
     `;
 
     const roomLabel = `${room.width} × ${room.height} m (${room.label})`;
+
+    const itemLines = state.placedItems.map(function (item) {
+      const product = productById(item.productId);
+      if (!product) return null;
+      const lineTotal = product.basePrice * item.quantity;
+      return `${item.quantity}× ${product.name} (${fmt(product.basePrice)} / ${product.priceType === 'hour' ? 'Std.' : 'Tag'} = ${fmt(lineTotal)})`;
+    }).filter(Boolean);
+
     const summaryText = [
       `Eventart: ${state.eventType || 'nicht gewählt'}`,
       `Fläche: ${state.venueType} ${roomLabel}`,
       `Gäste: ${state.guests || 'nicht angegeben'}`,
-      `Elemente: ${state.placedItems.length}`,
+      itemLines.length ? `Ausgewählte Elemente: ${itemLines.join(', ')}` : 'Elemente: keine',
       `Nutzfläche: ${Math.round(used)}%`,
       `Sitzplätze: ${seats}`,
-      `Gesamt: ${fmt(pricing.total)}`
-    ].join(' | ');
+      `Zwischensumme: ${fmt(pricing.subtotal)}`,
+      `Lieferkosten: ${fmt(pricing.delivery)}`,
+      pricing.setup > 0 ? `Aufbauhilfe: ${fmt(pricing.setup)}` : null,
+      pricing.discount > 0 ? `Rabatt: -${fmt(pricing.discount)}` : null,
+      `Gesamtpreis: ${fmt(pricing.total)}`
+    ].filter(Boolean).join(' | ');
 
     elements.planSummary.textContent = summaryText;
 
@@ -734,6 +746,36 @@
     }
   }
 
+  function initPlanningHelpPopup() {
+    const overlay = document.getElementById('planning-help-overlay');
+    const closeBtn = document.getElementById('planning-help-close');
+    const laterBtn = document.getElementById('planning-help-later');
+    const helpLink = document.getElementById('planning-help-link');
+    if (!overlay) return;
+
+    function showPopup() {
+      const planningMsg = encodeURIComponent('Hallo BANKetTISCH, ich würde gerne die Eventplanung an Sie übergeben. Bitte kontaktieren Sie mich für eine unverbindliche Beratung.');
+      helpLink.href = `kontakt.html?planung=${planningMsg}`;
+      overlay.hidden = false;
+      overlay.querySelector('.planning-help-dialog').focus();
+    }
+
+    function hidePopup() {
+      overlay.hidden = true;
+    }
+
+    setTimeout(showPopup, 30000);
+
+    closeBtn.addEventListener('click', hidePopup);
+    laterBtn.addEventListener('click', hidePopup);
+    overlay.addEventListener('click', function (event) {
+      if (event.target === overlay) hidePopup();
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !overlay.hidden) hidePopup();
+    });
+  }
+
   async function init() {
     try {
       state.products = await loadProducts();
@@ -748,6 +790,7 @@
       }
 
       syncAll();
+      initPlanningHelpPopup();
     } catch (error) {
       elements.libraryList.innerHTML = '<p class="empty-library">Produkte konnten nicht geladen werden. Bitte später erneut versuchen.</p>';
       console.error(error);
