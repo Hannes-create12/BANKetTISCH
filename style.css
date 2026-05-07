@@ -788,7 +788,7 @@ a { color: inherit; transition: opacity 0.2s; }
   /* ── Library: compact item cards ────────────────────────── */
   .library-item { grid-template-columns: 52px minmax(0, 1fr); gap: 0.35rem; padding: 0.4rem; }
   .library-item img { width: 52px; height: 52px; }
-  .library-list { max-height: 58vh; }
+  .library-list { max-height: 58vh; max-height: 58dvh; }
 
   /* ── Inputs: larger touch targets ───────────────────────── */
   .builder-card select,
