@@ -757,11 +757,17 @@
       const planningMsg = encodeURIComponent('Hallo BANKetTISCH, ich würde gerne die Eventplanung an Sie übergeben. Bitte kontaktieren Sie mich für eine unverbindliche Beratung.');
       helpLink.href = `kontakt.html?planung=${planningMsg}`;
       overlay.hidden = false;
-      overlay.querySelector('.planning-help-dialog').focus();
+      closeBtn.focus();
+      document.addEventListener('keydown', onKeydown);
     }
 
     function hidePopup() {
       overlay.hidden = true;
+      document.removeEventListener('keydown', onKeydown);
+    }
+
+    function onKeydown(event) {
+      if (event.key === 'Escape' && !overlay.hidden) hidePopup();
     }
 
     setTimeout(showPopup, 30000);
@@ -770,9 +776,6 @@
     laterBtn.addEventListener('click', hidePopup);
     overlay.addEventListener('click', function (event) {
       if (event.target === overlay) hidePopup();
-    });
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && !overlay.hidden) hidePopup();
     });
   }
 
