@@ -51,8 +51,15 @@
           <li data-step="5">5. Anfrage</li>
         </ol>
 
-        <div class="builder-layout">
-          <aside class="builder-panel builder-panel-left" aria-label="Einstellungen und Produkte">
+        <div class="builder-layout" id="builder-layout">
+          <!-- Mobile tab bar (visible < 1150px) -->
+          <nav class="builder-tab-bar" id="builder-tab-bar" aria-label="Builder-Bereiche">
+            <button type="button" class="builder-tab active" data-panel="left">⚙️ Einstellungen</button>
+            <button type="button" class="builder-tab" data-panel="canvas">🗺️ Planung</button>
+            <button type="button" class="builder-tab" data-panel="right">💶 Preis</button>
+          </nav>
+
+          <aside class="builder-panel builder-panel-left" id="builder-panel-left" aria-label="Einstellungen und Produkte">
             <section class="builder-card">
               <h2>Eventprofil</h2>
               <label for="event-type">Eventart</label>
@@ -99,7 +106,7 @@
             </section>
           </aside>
 
-          <section class="builder-canvas-panel" aria-label="Planungsfläche">
+          <section class="builder-canvas-panel" id="builder-panel-canvas" aria-label="Planungsfläche">
             <div class="builder-canvas-toolbar builder-card">
               <div class="toolbar-group">
                 <button id="toggle-grid" type="button" class="btn-dark">Raster: Ein</button>
@@ -137,7 +144,7 @@
             </div>
           </section>
 
-          <aside class="builder-panel builder-panel-right" aria-label="Preis und Empfehlungen">
+          <aside class="builder-panel builder-panel-right" id="builder-panel-right" aria-label="Preis und Empfehlungen">
             <section class="builder-card">
               <h2>Live-Preis</h2>
               <label for="delivery-zone">Lieferzone</label>

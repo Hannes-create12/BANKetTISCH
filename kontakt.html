@@ -18,6 +18,7 @@
       <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
         <a href="index.html">Start</a>
         <a href="produkte.html">Produkte</a>
+        <a href="event-builder.html">Event-Builder</a>
         <a href="kontakt.html">Kontakt</a>
         <a href="impressum.html">Impressum</a>
         <a href="tel:+4915155539947" class="cta-phone">📞 Anrufen</a>
@@ -81,6 +82,11 @@
           <!-- Contact Form -->
           <div class="contact-form-wrapper">
             <h3>Anfrageformular</h3>
+            <div id="builder-plan-notice" class="builder-plan-notice" hidden>
+              <strong>📋 Ihre Planungs-Zusammenfassung wurde übernommen:</strong>
+              <p id="builder-plan-text"></p>
+              <a href="event-builder.html" class="builder-plan-link">← Zurück zum Event-Builder</a>
+            </div>
             <form action="https://formsubmit.co/BANKetTISCH@gmail.com" method="POST">
               <input type="hidden" name="_subject" value="Neue Anfrage über die Website">
               <input type="hidden" name="_captcha" value="false">
@@ -157,6 +163,28 @@
 
   <script>
     document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Pre-fill from Event-Builder ?planung= param
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var planung = params.get('planung');
+        if (!planung) return;
+        var decoded = decodeURIComponent(planung);
+        var textarea = document.getElementById('message');
+        if (textarea && !textarea.value) {
+          textarea.value = decoded;
+        }
+        var notice = document.getElementById('builder-plan-notice');
+        var noticeText = document.getElementById('builder-plan-text');
+        if (notice && noticeText) {
+          noticeText.textContent = decoded;
+          notice.hidden = false;
+        }
+      } catch (e) {
+        // ignore
+      }
+    })();
   </script>
 </body>
 </html>

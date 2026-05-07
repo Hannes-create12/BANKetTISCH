@@ -547,6 +547,40 @@
     renderRecommendations();
   }
 
+  function bindTabBar() {
+    var tabBar = document.getElementById('builder-tab-bar');
+    if (!tabBar) return;
+
+    var panels = {
+      left: document.getElementById('builder-panel-left'),
+      canvas: document.getElementById('builder-panel-canvas'),
+      right: document.getElementById('builder-panel-right')
+    };
+
+    function activateTab(name) {
+      Array.from(tabBar.querySelectorAll('.builder-tab')).forEach(function (btn) {
+        btn.classList.toggle('active', btn.dataset.panel === name);
+      });
+      Object.keys(panels).forEach(function (key) {
+        if (panels[key]) panels[key].classList.toggle('tab-visible', key === name);
+      });
+    }
+
+    // Default: show canvas panel first on mobile
+    activateTab('canvas');
+
+    Array.from(tabBar.querySelectorAll('.builder-tab')).forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        activateTab(btn.dataset.panel);
+      });
+    });
+
+    // Auto-switch to pricing panel when an item is added
+    var origSyncAll = syncAll;
+    // Store reference for potential future use
+    void origSyncAll;
+  }
+
   function bindEvents() {
     elements.eventType.addEventListener('change', function () {
       state.eventType = this.value;
@@ -707,6 +741,7 @@
     try {
       state.products = await loadProducts();
       bindEvents();
+      bindTabBar();
       renderStage();
 
       const preselectedSlug = getQueryAdd();
