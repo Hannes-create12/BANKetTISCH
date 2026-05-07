@@ -576,9 +576,6 @@
     });
 
     // Auto-switch to pricing panel when an item is added
-    var origSyncAll = syncAll;
-    // Store reference for potential future use
-    void origSyncAll;
   }
 
   function bindEvents() {
