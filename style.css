@@ -744,10 +744,64 @@ a { color: inherit; transition: opacity 0.2s; }
 }
 
 @media (max-width: 760px) {
-  .builder-stepper { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .planner-viewport { min-height: 360px; }
-  .selected-button-row { grid-template-columns: 1fr; }
-  .builder-trust { display: grid; gap: 0.5rem; }
+  /* ── Hero: compact on phones ────────────────────────────── */
+  .event-builder-hero { padding: 0.85rem 0 0.4rem; }
+  .builder-hero-copy h1 { font-size: 1.25rem; margin: 0.3rem 0 0.4rem; }
+  .builder-hero-copy p { display: none; }
+  .builder-trust { display: none; }
+
+  /* ── Stepper: scrollable single row ─────────────────────── */
+  .builder-stepper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.3rem;
+    padding-bottom: 0.15rem;
+    scrollbar-width: none;
+    margin-bottom: 0.6rem;
+  }
+  .builder-stepper::-webkit-scrollbar { display: none; }
+  .builder-stepper li {
+    flex: 0 0 auto;
+    font-size: 0.72rem;
+    padding: 0.38rem 0.55rem;
+  }
+
+  /* ── Tab bar: bigger tap targets ────────────────────────── */
+  .builder-tab { padding: 0.7rem 0.5rem; font-size: 0.88rem; }
+
+  /* ── Canvas toolbar: horizontal scroll, no wrapping ─────── */
+  .builder-canvas-toolbar {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    padding-bottom: 0.2rem;
+    scrollbar-width: none;
+  }
+  .builder-canvas-toolbar::-webkit-scrollbar { display: none; }
+  .toolbar-group { flex-wrap: nowrap; }
+
+  /* ── Planner: adjusted height ───────────────────────────── */
+  .planner-viewport { min-height: 300px; }
+
+  /* ── Library: compact item cards ────────────────────────── */
+  .library-item { grid-template-columns: 52px minmax(0, 1fr); gap: 0.35rem; padding: 0.4rem; }
+  .library-item img { width: 52px; height: 52px; }
+  .library-list { max-height: 58vh; max-height: 58dvh; }
+
+  /* ── Inputs: larger touch targets ───────────────────────── */
+  .builder-card select,
+  .builder-card input[type='number'],
+  .builder-card input[type='search'] { padding: 0.75rem 0.8rem; font-size: 0.95rem; }
+
+  /* ── Cards: tighter padding ─────────────────────────────── */
+  .builder-card { padding: 0.8rem; }
+
+  /* ── Selected-item: 2-column button row ─────────────────── */
+  .selected-button-row { grid-template-columns: 1fr 1fr; }
+
+  /* ── Misc ───────────────────────────────────────────────── */
   .mobile-builder-actions { display: block; }
   .event-builder-promo { flex-direction: column; align-items: stretch; }
 }
