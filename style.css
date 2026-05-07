@@ -583,7 +583,7 @@ a { color: inherit; transition: opacity 0.2s; }
 .toolbar-group .btn-dark { padding: 0.45rem 0.65rem; font-size: 0.82rem; border-radius: 10px; }
 
 .planner-viewport {
-  border: 1px solid #cfd7e4;
+  border: 1px solid var(--border);
   border-radius: 16px;
   background: linear-gradient(180deg, #f7f9ff 0%, #eff4ff 100%);
   min-height: 420px;

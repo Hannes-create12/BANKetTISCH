@@ -2,6 +2,21 @@
   'use strict';
 
   const PIXELS_PER_METER = 60;
+  const DUPLICATE_OFFSET = 24;
+  const ESCAPE_MAP = { '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' };
+  const PRODUCT_IDS = {
+    tent3x6: 'zelt-3x6',
+    tent4x8: 'zelt-4x8',
+    pavilion3x3: 'pavillon-3x3',
+    heater: 'heizstrahler',
+    beerTap: 'bierzapfanlage',
+    beerGlasses: 'bierglaeser',
+    literGlasses: 'massglaeser',
+    covers: 'hussen',
+    service: 'servicekraefte'
+  };
+
+  let idCounter = 0;
   const ROOM_SIZES = {
     s: { label: 'S', width: 6, height: 4 },
     m: { label: 'M', width: 10, height: 6 },
@@ -82,8 +97,15 @@
 
   function safeText(value) {
     return String(value || '').replace(/[&<>'"]/g, function (char) {
-      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[char];
+      return ESCAPE_MAP[char];
     });
+  }
+
+  function generateItemId() {
+    idCounter += 1;
+    return crypto.randomUUID
+      ? crypto.randomUUID()
+      : `${Date.now()}-${idCounter}-${Math.random().toString(36).slice(2, 8)}`;
   }
 
   function parsePrice(raw) {
@@ -94,10 +116,10 @@
 
   function normalizedProduct(raw) {
     const defaults = {
-      priceType: /stunde/i.test(raw.price || '') ? 'hour' : 'day',
+      priceType: 'day',
       basePrice: parsePrice(raw.price),
       dimensions: { width: 1.2, depth: 0.8, unit: 'm' },
-      footprint: { width: 1.2, height: 0.8 },
+      footprint: { width: 1.2, depth: 0.8 },
       seatsCapacity: 0,
       tags: [],
       upsellRelations: [],
@@ -167,7 +189,7 @@
   function addItem(product) {
     const size = stageSizePx();
     const item = {
-      id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random()),
+      id: generateItemId(),
       productId: product.id,
       x: size.width / 2,
       y: size.height / 2,
@@ -190,10 +212,10 @@
 
   function itemFootprint(item, product) {
     const width = (product.footprint && Number(product.footprint.width)) || 1;
-    const height = (product.footprint && Number(product.footprint.height)) || 1;
+    const depth = (product.footprint && Number(product.footprint.depth || product.footprint.height)) || 1;
     return {
       widthPx: Math.max(36, width * PIXELS_PER_METER * item.scale),
-      heightPx: Math.max(36, height * PIXELS_PER_METER * item.scale)
+      heightPx: Math.max(36, depth * PIXELS_PER_METER * item.scale)
     };
   }
 
@@ -304,8 +326,9 @@
       })
       .filter(Boolean));
 
-    const hasCoreBundle = state.placedItems.some(function (item) { return item.productId === 'zelt-3x6' || item.productId === 'zelt-4x8' || item.productId === 'pavillon-3x3'; }) &&
-      state.placedItems.some(function (item) { return item.productId === 'biertischgarnitur'; });
+    const hasCoreBundle = state.placedItems.some(function (item) {
+      return item.productId === PRODUCT_IDS.tent3x6 || item.productId === PRODUCT_IDS.tent4x8 || item.productId === PRODUCT_IDS.pavilion3x3;
+    }) && state.placedItems.some(function (item) { return item.productId === 'biertischgarnitur'; });
 
     let discount = 0;
     if (subtotal >= 120 && categories.size >= 3) {
@@ -339,8 +362,8 @@
       const product = productById(item.productId);
       if (!product || !product.footprint) return sum;
       const width = Number(product.footprint.width) || 0;
-      const height = Number(product.footprint.height) || 0;
-      return sum + width * height * item.quantity * item.scale * item.scale;
+      const depth = Number(product.footprint.depth || product.footprint.height) || 0;
+      return sum + width * depth * item.quantity * item.scale * item.scale;
     }, 0);
 
     return Math.min(100, (used / roomArea) * 100);
@@ -375,19 +398,19 @@
       return state.placedItems.some(function (item) { return item.productId === id; });
     };
 
-    if ((has('zelt-3x6') || has('zelt-4x8') || has('pavillon-3x3')) && !has('heizstrahler')) {
+    if ((has(PRODUCT_IDS.tent3x6) || has(PRODUCT_IDS.tent4x8) || has(PRODUCT_IDS.pavilion3x3)) && !has(PRODUCT_IDS.heater)) {
       list.push('Zu Ihrem Zelt passt ein Heizstrahler für kühlere Abendstunden.');
     }
 
-    if (has('bierzapfanlage') && !has('bierglaeser') && !has('massglaeser')) {
+    if (has(PRODUCT_IDS.beerTap) && !has(PRODUCT_IDS.beerGlasses) && !has(PRODUCT_IDS.literGlasses)) {
       list.push('Zu Ihrer Bierzapfanlage empfehlen wir Biergläser oder Maßgläser.');
     }
 
-    if (state.eventType === 'hochzeit' && !has('hussen')) {
+    if (state.eventType === 'hochzeit' && !has(PRODUCT_IDS.covers)) {
       list.push('Für Hochzeiten werden Hussen und Chevys besonders häufig gebucht.');
     }
 
-    if (state.guests >= 35 && !has('servicekraefte')) {
+    if (state.guests >= 35 && !has(PRODUCT_IDS.service)) {
       list.push('Für 35+ Gäste empfehlen wir zusätzliche Servicekräfte für einen reibungslosen Ablauf.');
     }
 
@@ -629,7 +652,7 @@
     elements.duplicateItem.addEventListener('click', function () {
       const item = placedById(state.selectedItemId);
       if (!item) return;
-      const duplicate = { ...item, id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random()), x: item.x + 24, y: item.y + 24 };
+      const duplicate = { ...item, id: generateItemId(), x: item.x + DUPLICATE_OFFSET, y: item.y + DUPLICATE_OFFSET };
       state.placedItems.push(duplicate);
       state.selectedItemId = duplicate.id;
       syncAll();
@@ -662,7 +685,7 @@
   }
 
   async function loadProducts() {
-    const response = await fetch('products.json', { cache: 'no-store' });
+    const response = await fetch('products.json');
     if (!response.ok) {
       throw new Error('Produkte konnten nicht geladen werden.');
     }
@@ -674,7 +697,8 @@
     try {
       const params = new URLSearchParams(window.location.search);
       return params.get('add');
-    } catch {
+    } catch (error) {
+      console.warn('URL-Parameter konnten nicht gelesen werden:', error);
       return null;
     }
   }
